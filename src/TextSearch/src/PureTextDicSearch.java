@@ -13,6 +13,9 @@
 
 package TextSearch.src;
 
+import common.utils.time_utils.TimeUtils;
+
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -28,14 +31,18 @@ public class PureTextDicSearch {
 
     public static void main(String[] args) {
 
-        System.out.println("::: Source Search Dic :::");
-        System.out.println(dic);
 
-        System.out.println("::: Equals Search Result :::");
-        searchEquals("人设").forEach(System.out::println);
+        TimeUtils.getTime("Source Search Dic" , () -> {
+            System.out.println(dic);
+        });
 
-        System.out.println("::: Blur Search Result :::");
-        System.out.println(searchBlur("知乎人设"));
+        TimeUtils.getTime("Equals Search Result" , () -> {
+            searchEquals("人设").forEach(System.out::println);
+        });
+
+        TimeUtils.getTime("Blur Search Result" , () -> {
+            System.out.println(searchBlur("知乎人设"));
+        });
 
     }
 
