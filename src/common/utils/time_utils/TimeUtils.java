@@ -25,6 +25,9 @@ public class TimeUtils {
         System.out.println("::: " + title + " :::");
         long begin = new Date().getTime();
         callback.run();
-        System.out.println("::: 用时: " + String.valueOf(new Date().getTime() - begin) + "Ms :::");
+        System.out.println("::: 用时: " + (new Date().getTime() - begin) + "Ms :::");
+        System.out.println(
+                "-----------------------------------------------------------------------------------"
+        );
     }
 }
