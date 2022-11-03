@@ -34,7 +34,6 @@ public class PureTextDicSearch {
         System.out.println("::: Equals Search Result :::");
         searchEquals("人设").forEach(System.out::println);
 
-
         System.out.println("::: Blur Search Result :::");
         System.out.println(searchBlur("知乎人设"));
 
