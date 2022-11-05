@@ -37,7 +37,6 @@ public class PureTextDicSearch {
 
         TimeUtils.getTime("Source Search Dic", () -> {
             System.out.println(getDic(getSample()));
-
         });
 
         TimeUtils.getTime("Equals Search Result", () -> System.out.println(searchEquals(searchKeyEquals)));
@@ -55,7 +54,6 @@ public class PureTextDicSearch {
         );
 
         TimeUtils.getTime("Blur Search Result", () -> System.out.println(searchBlur(searchKeyBlur)));
-
     }
 
     public static boolean searchEquals(String content) {
