@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/leetcode/Order0015ThreeSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TimePerformance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/Order0015ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/Order0015ThreeSum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,46 +63,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Order0015ThreeSum$Solution1_3">
-    <configuration name="Order0001TwoSum$Solution3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.Order0001TwoSum$Solution3" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Order0015ThreeSum$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution1" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Order0015ThreeSum$Solution1_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution1_1" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Order0015ThreeSum$Solution2_1">
     <configuration name="Order0015ThreeSum$Solution1_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution1_2" />
       <module name="Algorithm" />
@@ -115,12 +77,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Order0015ThreeSum$Solution1_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution1_3" />
+    <configuration name="Order0015ThreeSum$Solution2_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution2_1" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Order0015ThreeSum$Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Test1" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimePerformance$CollectionApiPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TimePerformance$CollectionApiPerformance" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimePerformance$Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TimePerformance$Test1" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -199,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Order0015ThreeSum$Solution1_3" />
+        <item itemvalue="Application.Order0015ThreeSum$Solution2_1" />
         <item itemvalue="Application.Order0015ThreeSum$Solution1_2" />
-        <item itemvalue="Application.Order0015ThreeSum$Solution1_1" />
-        <item itemvalue="Application.Order0015ThreeSum$Solution1" />
-        <item itemvalue="Application.Order0001TwoSum$Solution3" />
+        <item itemvalue="Application.TimePerformance$CollectionApiPerformance" />
+        <item itemvalue="Application.TimePerformance$Test1" />
+        <item itemvalue="Application.Order0015ThreeSum$Test1" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +217,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667448302850</updated>
       <workItem from="1667448304900" duration="29619000" />
-      <workItem from="1667638804761" duration="17672000" />
+      <workItem from="1667638804761" duration="33882000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -246,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667640186802</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="leetcode 15 Solution1_1 | Solution1_2">
+      <created>1667706022647</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667706022647</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +269,7 @@
     <MESSAGE value="增加了一个时间处理工具" />
     <MESSAGE value="字典查询，差不多就是这样了，很显然原本的时间复杂度是O(n)，字典本身其实也是O(n)，但是不一样的是判断，大概吧" />
     <MESSAGE value="想必已经看出来了，这个仓库其实就是用来刷leetcode的。。。" />
-    <option name="LAST_COMMIT_MESSAGE" value="想必已经看出来了，这个仓库其实就是用来刷leetcode的。。。" />
+    <MESSAGE value="leetcode 15 Solution1_1 | Solution1_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode 15 Solution1_1 | Solution1_2" />
   </component>
 </project>
