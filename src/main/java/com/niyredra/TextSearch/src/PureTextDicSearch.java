@@ -13,7 +13,7 @@
 
 package com.niyredra.TextSearch.src;
 
-import main.java.common.utils.time_utils.TimeUtils;
+import com.niyredra.common.utils.time_utils.TimeUtils;
 
 import java.util.*;
 import java.util.stream.Stream;
