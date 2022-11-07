@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/TimePerformance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jknack_handlebars_4_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_icepear_echarts_echarts_java_1_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leetcode/Order0015ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leetcode/Order0015ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextSearch/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/TextSearch/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextSearch/src/PureTextDicSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/TextSearch/src/PureTextDicSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/time_utils/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/time_utils/TimeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/time_utils/TimeUtilsCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/time_utils/TimeUtilsCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/Order0001TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0001TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leetcode/Order0015ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0015ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TimePerformance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TimePerformance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -34,6 +60,16 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2H1MnRQ9j33I6umOwxE20u24QEK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,31 +81,38 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/eve/Code/Niyredra/Java/Algorithm",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Order0015ThreeSum$Solution2_1">
-    <configuration name="Order0015ThreeSum$Solution1_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution1_2" />
+  <component name="RunManager" selected="Application.Order0015ThreeSum$Solution2_4">
+    <configuration name="Order0015ThreeSum$Solution2_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution2_4" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leetcode.*" />
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Order0015ThreeSum$Solution2_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution2_1" />
+    <configuration name="Solution2_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum.Solution2_2" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leetcode.*" />
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Order0015ThreeSum$Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Test1" />
+    <configuration name="Solution2_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum.Solution2_3" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leetcode.*" />
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,8 +146,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimePerformance$CollectionApiPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TimePerformance$CollectionApiPerformance" />
+    <configuration name="TimePerformance$ArrayListInitialPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TimePerformance$ArrayListInitialPerformance" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -116,8 +159,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimePerformance$Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TimePerformance$Test1" />
+    <configuration name="TimePerformance$CollectionContainsApiPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TimePerformance$CollectionContainsApiPerformance" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -200,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Order0015ThreeSum$Solution2_1" />
-        <item itemvalue="Application.Order0015ThreeSum$Solution1_2" />
-        <item itemvalue="Application.TimePerformance$CollectionApiPerformance" />
-        <item itemvalue="Application.TimePerformance$Test1" />
-        <item itemvalue="Application.Order0015ThreeSum$Test1" />
+        <item itemvalue="Application.Order0015ThreeSum$Solution2_4" />
+        <item itemvalue="Application.TimePerformance$CollectionContainsApiPerformance" />
+        <item itemvalue="Application.Order0015ThreeSum$Solution2_3" />
+        <item itemvalue="Application.TimePerformance$ArrayListInitialPerformance" />
+        <item itemvalue="Application.Order0015ThreeSum$Solution2_2" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +260,8 @@
       <option name="presentableId" value="Default" />
       <updated>1667448302850</updated>
       <workItem from="1667448304900" duration="29619000" />
-      <workItem from="1667638804761" duration="33882000" />
+      <workItem from="1667638804761" duration="39937000" />
+      <workItem from="1667792390853" duration="5513000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -254,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667706022647</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="leetcode 15 Solution2_1 第一套成功原型 2553 ms">
+      <created>1667727591128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667727591128</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +321,7 @@
     <MESSAGE value="字典查询，差不多就是这样了，很显然原本的时间复杂度是O(n)，字典本身其实也是O(n)，但是不一样的是判断，大概吧" />
     <MESSAGE value="想必已经看出来了，这个仓库其实就是用来刷leetcode的。。。" />
     <MESSAGE value="leetcode 15 Solution1_1 | Solution1_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode 15 Solution1_1 | Solution1_2" />
+    <MESSAGE value="leetcode 15 Solution2_1 第一套成功原型 2553 ms" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode 15 Solution2_1 第一套成功原型 2553 ms" />
   </component>
 </project>

@@ -11,9 +11,9 @@
  * 在这个世界上，即便是物理学也要让她三分。在这个世界上，她实现的东西如算法一般精美，巧妙。她所谱写的，是这个世界的艺术，最原初的样貌。
  */
 
-package TextSearch.src;
+package com.niyredra.TextSearch.src;
 
-import common.utils.time_utils.TimeUtils;
+import main.java.common.utils.time_utils.TimeUtils;
 
 import java.util.*;
 import java.util.stream.Stream;
