@@ -5,35 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/constant/ConstantPath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0015ThreeSum.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/TextSearch/src/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/TextSearch/src/PureTextDicSearch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/common/utils/time_utils/TimeUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/common/utils/time_utils/TimeUtilsCallback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0001TwoSum$Solution1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0001TwoSum$Solution2_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0001TwoSum$Solution2_2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0001TwoSum$Solution2_3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0001TwoSum$Solution2_4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0001TwoSum$Solution3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0001TwoSum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/TextSearch/src/PureTextDicSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/TextSearch/src/PureTextDicSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/TextSearch/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/TextSearch/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0015ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0015ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/leetcode/Order0015ThreeSum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/leetcode/Order0015ThreeSum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/TextSearch/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/TextSearch/src/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +82,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -113,7 +96,20 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Order0015ThreeSum$Solution2_3_2">
+  <component name="RunManager" selected="Application.Order0015ThreeSum$Solution2_3_Chart2">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.TextSearch.src.Main" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.TextSearch.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Order0015ThreeSum$Solution2_3_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum$Solution2_3_1" />
       <module name="Algorithm" />
@@ -140,38 +136,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Order0015ThreeSum$Solution2_3_Chart2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum$Solution2_3_Chart2" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Order0015ThreeSum$Solution2_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetcode.Order0015ThreeSum$Solution2_4" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution2_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum.Solution2_3" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TimePerformance$CollectionContainsApiPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TimePerformance$CollectionContainsApiPerformance" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -250,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Order0015ThreeSum$Solution2_3_Chart2" />
         <item itemvalue="Application.Order0015ThreeSum$Solution2_3_2" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Order0015ThreeSum$Solution2_3_1" />
         <item itemvalue="Application.Order0015ThreeSum$Solution2_4" />
-        <item itemvalue="Application.TimePerformance$CollectionContainsApiPerformance" />
-        <item itemvalue="Application.Order0015ThreeSum$Solution2_3" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +251,7 @@
       <updated>1667448302850</updated>
       <workItem from="1667448304900" duration="29619000" />
       <workItem from="1667638804761" duration="39937000" />
-      <workItem from="1667792390853" duration="9571000" />
+      <workItem from="1667792390853" duration="25405000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -319,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667798496571</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="增加了一个图表组件库">
+      <created>1667803035086</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667803035086</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +328,7 @@
     <MESSAGE value="leetcode 15 Solution1_1 | Solution1_2" />
     <MESSAGE value="leetcode 15 Solution2_1 第一套成功原型 2553 ms" />
     <MESSAGE value="进化成了Maven项目！" />
-    <option name="LAST_COMMIT_MESSAGE" value="进化成了Maven项目！" />
+    <MESSAGE value="增加了一个图表组件库" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了一个图表组件库" />
   </component>
 </project>
