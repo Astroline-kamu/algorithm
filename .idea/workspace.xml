@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0015ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0015ThreeSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/leetcode/Order0015ThreeSum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/leetcode/Order0015ThreeSum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution1_2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/eve/Code/Niyredra/Java/Algorithm",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
@@ -249,7 +250,7 @@
       <updated>1667448302850</updated>
       <workItem from="1667448304900" duration="29619000" />
       <workItem from="1667638804761" duration="39937000" />
-      <workItem from="1667792390853" duration="27027000" />
+      <workItem from="1667792390853" duration="31256000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -314,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667888913389</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="三数之和 稍微过滤了一下生成图表的空数据 - 代码分析时间太长了">
+      <created>1667890308240</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667890308240</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +343,7 @@
     <MESSAGE value="进化成了Maven项目！" />
     <MESSAGE value="增加了一个图表组件库" />
     <MESSAGE value="三数之和 更新了另外的解题思路，但是还未实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="三数之和 更新了另外的解题思路，但是还未实现" />
+    <MESSAGE value="三数之和 稍微过滤了一下生成图表的空数据 - 代码分析时间太长了" />
+    <option name="LAST_COMMIT_MESSAGE" value="三数之和 稍微过滤了一下生成图表的空数据 - 代码分析时间太长了" />
   </component>
 </project>

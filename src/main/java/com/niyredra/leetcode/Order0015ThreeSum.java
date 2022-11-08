@@ -21,8 +21,6 @@ import org.icepear.echarts.render.Engine;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.IntFunction;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -50,26 +48,39 @@ public class Order0015ThreeSum {
                 }
 
                 List<List<Integer>> listList = Objects.requireNonNull(Solution2_3_1.threeSum(newSample));
-
-                listList = listList.stream().sorted(Comparator.comparing(r -> r.get(0))).collect(Collectors.toList());
-
                 AtomicInteger idx = new AtomicInteger();
                 idx.set(-1);
-                Number[][] pointList = new Number[listList.size() * 3][2];
-                for (List<Integer> list :
-                        listList) {
-                    idx.getAndIncrement();
-//                    if (idx.get() % 3 != 0) continue;
-//                if (idx.get() > 36) continue;
-                    if (list.get(0) != -249) continue;  //
-                    pointList[idx.get() * 3] = new Number[]{list.get(0), idx.get()};
-                    pointList[idx.get() * 3 + 1] = new Number[]{list.get(1), idx.get()};
-                    pointList[idx.get() * 3 + 2] = new Number[]{list.get(2), idx.get()};
-                }
 
-                pointList = Arrays.stream(pointList)
+                Number[][] pointList;
+                pointList = listList.stream()
+                        .sorted(Comparator.comparing(r -> r.get(0)))
+                        // mapMulti Version
+                        .<Number[]>mapMulti((pi, consumer) -> {
+                            idx.getAndIncrement();
+//                            if (idx.get() % 3 != 0) return;
+//                            if (idx.get() > 36) return;
+                            if (pi.get(0) != -249) return;
+                            consumer.accept(new Number[]{pi.get(0), idx.get()});
+                            consumer.accept(new Number[]{pi.get(1), idx.get()});
+                            consumer.accept(new Number[]{pi.get(2), idx.get()});
+                        })
+
+                        // flatMap Version 据说每次flatMap都要创建一个新Stream流
+//                        .flatMap(pi -> {
+//                            idx.getAndIncrement();
+//                            return Stream.of(
+//                                    new Number[][]{
+//                                            {pi.get(0), idx.get()},
+//                                            {pi.get(1), idx.get()},
+//                                            {pi.get(2), idx.get()}
+//                                    }
+//                            );
+//                        })
+
                         .filter(numbers -> !(Objects.equals(numbers[0], numbers[1]) && numbers[0] == null))
                         .toArray(size -> new Number[size][2]);
+
+                System.out.println(Arrays.deepToString(pointList));
 
                 Scatter scatter = new Scatter()
                         .setTitle("Solution2_3_Chart2")
@@ -114,55 +125,6 @@ public class Order0015ThreeSum {
                 new Engine()
                         .render(ConstantPath.resourcePath + "leetcode/Order0015ThreeSum.html",
                                 scatter, "1000", "1000", true);
-            });
-        }
-    }
-
-    /**
-     * 时间 987 ms
-     * 内存 45.8 MB
-     */
-    static class Solution2_3_2 {
-        public static List<List<Integer>> threeSum(int[] nums) {
-            int target = 0;
-            Set<List<Integer>> res = new HashSet<>();
-            nums = Arrays.stream(nums).sorted().toArray();
-
-
-            Map<Integer, Integer[]> xSum = new HashMap<>();
-            for (int i = 0; i < nums.length; i++) {
-
-                // 假设每一个x都为中值 将x的内容加或减到0。当x = 0时 y = -z
-                xSum.putIfAbsent(nums[i], twoSum(nums, -nums[i]));
-            }
-
-            for (int i = 0; i < nums.length; i++) {
-//                int y =
-
-//                int z = target - (nums[i] + nums[j]);
-//                if (Arrays.binarySearch(nums, j + 1, nums.length, z) > 0) {  // binarySearch如果查不到值的话，会返回 -(Array.length)，所以一定小于0
-//                    res.add(Arrays.asList(nums[i], nums[j], z));
-//                }
-            }
-            return res.stream().toList();
-        }
-
-        public static Integer[] twoSum(int[] nums, int target) {
-            Map<Integer, Integer> map = new HashMap<>();
-            for (int i = 0; i < nums.length; i++) {
-                if (map.containsKey(target - nums[i])) {
-                    return new Integer[]{map.get(target - nums[i]), i};
-                }
-                map.put(nums[i], i);
-            }
-            throw new IllegalArgumentException("No two sum solution");
-        }
-
-        public static void main(String[] args) {
-            TimeUtils.getTime("Solution2_3_2", () -> {
-                List<List<Integer>> listList = Objects.requireNonNull(Solution2_3_2.threeSum(sample));
-                listList.forEach(System.out::println);
-                System.out.println(listList.size());
             });
         }
     }
