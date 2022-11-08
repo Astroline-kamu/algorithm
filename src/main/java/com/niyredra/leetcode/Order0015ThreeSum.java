@@ -21,6 +21,7 @@ import org.icepear.echarts.render.Engine;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.IntFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -66,6 +67,10 @@ public class Order0015ThreeSum {
                     pointList[idx.get() * 3 + 2] = new Number[]{list.get(2), idx.get()};
                 }
 
+                pointList = Arrays.stream(pointList)
+                        .filter(numbers -> !(Objects.equals(numbers[0], numbers[1]) && numbers[0] == null))
+                        .toArray(size -> new Number[size][2]);
+
                 Scatter scatter = new Scatter()
                         .setTitle("Solution2_3_Chart2")
                         .addXAxis("Size")
@@ -73,7 +78,7 @@ public class Order0015ThreeSum {
                         .addSeries(pointList);
                 new Engine()
                         .render(ConstantPath.resourcePath + "leetcode/Order0015ThreeSum.html",
-                                scatter, "1000", "1000", true);
+                                scatter, "900px", "900px", true);
             });
         }
     }
