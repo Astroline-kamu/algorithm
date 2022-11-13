@@ -116,23 +116,24 @@ public class TimePerformance {
     static class SortPerformance {
         public static void main(String[] args) {
 
-            Arrays.stream(sample.clone()).sorted().boxed().toArray();
-
-            TimeUtils.getTime("3000条随机样本数据 Stream Sort 用时",
+            TimeUtils.getTime("3000条随机样本数据 Stream Sort",
                     () -> Arrays.stream(sample.clone()).sorted().boxed().toArray(),
                     1
             );
 
-            TimeUtils.getTime("3000条随机样本数据 Array Sort 用时",
-                    () -> Arrays.sort(sample.clone())
+            TimeUtils.getTime("3000条随机样本数据 Array Sort",
+                    () -> Arrays.sort(sample.clone()),
+                    1
             );
 
-            TimeUtils.getTime("3000条随机样本数据 冒泡排序 用时",
-                    () -> bubble(sample.clone())
+            TimeUtils.getTime("3000条随机样本数据 冒泡排序",
+                    () -> bubble(sample.clone()),
+                    1
             );
 
-            TimeUtils.getTime("3000条随机样本数据 快速排序 用时",
-                    () -> quicksort(sample.clone(), 0, sample.length - 1)
+            TimeUtils.getTime("3000条随机样本数据 快速排序",
+                    () -> quicksort(sample.clone(), 0, sample.length - 1),
+                    100000
             );
 
         }

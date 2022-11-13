@@ -20,53 +20,55 @@ import java.math.RoundingMode;
 import java.util.Date;
 
 /**
- *
  * 一个有趣的现象：
  * <a href="https://www.cnblogs.com/niejunlei/p/14435438.html">JVM预热</a> - 所以此处有两种分析 首次执行以及缓存后平均执行
  * <p>
- *
+ * <p>
  * 我可以说，其实，我可以用Profiler做这个么...
+ *
  * @author Niyredra Astroline_kamu@outlook.com
  */
 public class TimeUtils {
 
     /**
-     *
      * 简单的时间测试用例
-     * @param title 当次测试用例的标记
+     *
+     * @param title    当次测试用例的标记
      * @param callback 具体测试执行内容
      */
-    public static void getTime(String title, TimeUtilsCallback callback){
+    public static void getTime(String title, TimeUtilsCallback callback) {
         System.out.println("::: " + title + " :::");
-        long begin = new Date().getTime();
+        long begin = System.nanoTime();
         callback.run();
-        System.out.println("::: 用时: " + (new Date().getTime() - begin) + "Ms :::");
+        System.out.println("::: 用时: " + BigDecimal.valueOf(System.nanoTime() - begin)
+                .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN)
+                .stripTrailingZeros().toPlainString() + "Ms :::");
         System.out.println(
                 "-----------------------------------------------------------------------------------"
         );
     }
 
     /**
-     *
      * 一般而言，多次执行的测试只要计算缓存之后的平均时间就好，初次缓存的时间其实是干扰平均结果的，
      * 似乎不太需要靠后面的循环来消费首次循坏带来的压力，这样真的不公平。
      *
-     * @param title 当次测试用例的标记
+     * @param title    当次测试用例的标记
      * @param callback 具体测试内容
-     * @param epoch 测试次数
+     * @param epoch    测试次数
      */
-    public static void getTime(String title, TimeUtilsCallback callback, int epoch){
+    public static void getTime(String title, TimeUtilsCallback callback, int epoch) {
         getTime("初次执行 - " + title, callback);
 
         System.out.println("::: " + title + " :::");
-        long begin = new Date().getTime();
+        long begin = System.nanoTime();
         for (int i = 0; i < epoch; i++) callback.run();
-        long end = new Date().getTime() - begin;
+        BigDecimal end = BigDecimal.valueOf(System.nanoTime() - begin)
+                .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN)
+                .stripTrailingZeros();
         System.out.println(
                 StringUtils.toString(
                         "::: 循环 -" + epoch + "- 次 ", "总用时: " + end + "Ms｜", "平均用时: ",
-                        BigDecimal.valueOf(end)
-                                .divide(BigDecimal.valueOf(epoch),8, RoundingMode.HALF_DOWN)
+                        end.divide(BigDecimal.valueOf(epoch), 12, RoundingMode.HALF_DOWN)
                                 .stripTrailingZeros().toPlainString(),
                         "Ms :::\n",
                         "===================================================================================\n"
