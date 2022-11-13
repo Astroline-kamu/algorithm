@@ -106,9 +106,6 @@ public class TimePerformance {
 
             TimeUtils.getTime(len + "条数据 Arrays.binarySearch 用时", () -> Arrays.binarySearch(largeSample, key), 1000000);
 
-
-
-
         }
     }
 
@@ -119,44 +116,24 @@ public class TimePerformance {
     static class SortPerformance {
         public static void main(String[] args) {
 
-            TimeUtils.getTime("3000条数据 Stream Sort 用时", () -> {
-                int[] s = sample.clone();
-                System.out.println(
-                        Arrays.toString(
-                                Arrays.stream(s)
-                                        .sorted()
-                                        .toArray()
-                        )
-                );
-            });
+            Arrays.stream(sample.clone()).sorted().boxed().toArray();
 
-            TimeUtils.getTime("3000条数据 Stream 单 toArray 用时", () -> {
-                int[] s = sample.clone();
-                System.out.println(
-                        Arrays.toString(
-                                Arrays.stream(s)
-                                        .toArray()
-                        )
-                );
-            });
+            TimeUtils.getTime("3000条随机样本数据 Stream Sort 用时",
+                    () -> Arrays.stream(sample.clone()).sorted().boxed().toArray(),
+                    1
+            );
 
-            TimeUtils.getTime("3000条数据 Array Sort 用时", () -> {
-                int[] s = sample.clone();
-                Arrays.sort(s);
-                System.out.println(Arrays.toString(s));
-            });
+            TimeUtils.getTime("3000条随机样本数据 Array Sort 用时",
+                    () -> Arrays.sort(sample.clone())
+            );
 
-            TimeUtils.getTime("3000条数据 冒泡排序 用时", () -> {
-                int[] s = sample.clone();
-                bubble(s);
-                System.out.println(Arrays.toString(s));
-            });
+            TimeUtils.getTime("3000条随机样本数据 冒泡排序 用时",
+                    () -> bubble(sample.clone())
+            );
 
-            TimeUtils.getTime("3000条数据 快速排序 用时", () -> {
-                int[] s = sample.clone();
-                quicksort(s, 0, sample.length - 1);
-                System.out.println(Arrays.toString(s));
-            });
+            TimeUtils.getTime("3000条随机样本数据 快速排序 用时",
+                    () -> quicksort(sample.clone(), 0, sample.length - 1)
+            );
 
         }
 
