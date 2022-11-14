@@ -33,18 +33,18 @@ public class PureTextDicSearch {
         String searchKeyEquals = "人设";
         String searchKeyBlur = "知乎人设";
 
-        TimeUtils.getTime("General Contains", () -> System.out.println(getSample().contains(searchKeyEquals)));
+        TimeUtils.printTime("General Contains", () -> System.out.println(getSample().contains(searchKeyEquals)));
 
-        TimeUtils.getTime("Source Search Dic", () -> {
+        TimeUtils.printTime("Source Search Dic", () -> {
             System.out.println(getDic(getSample()));
         });
 
-        TimeUtils.getTime("Equals Search Result", () -> System.out.println(searchEquals(searchKeyEquals)));
+        TimeUtils.printTime("Equals Search Result", () -> System.out.println(searchEquals(searchKeyEquals)));
 
         // 特殊用法 取到所有匹配到的点
 //        TimeUtils.getTime("Equals Search Result" , () -> searchEqualsAndReturn(searchKeyEquals).forEach(System.out::println));
 
-        TimeUtils.getTime("General All Contains", () ->
+        TimeUtils.printTime("General All Contains", () ->
                 System.out.println(
                         Stream.of(searchKeyBlur.toCharArray())
                                 .allMatch(word ->
@@ -53,7 +53,7 @@ public class PureTextDicSearch {
                 )
         );
 
-        TimeUtils.getTime("Blur Search Result", () -> System.out.println(searchBlur(searchKeyBlur)));
+        TimeUtils.printTime("Blur Search Result", () -> System.out.println(searchBlur(searchKeyBlur)));
     }
 
     public static boolean searchEquals(String content) {

@@ -10,6 +10,7 @@
  *
  * 在这个世界上，即便是物理学也要让她三分。在这个世界上，她实现的东西如算法一般精美，巧妙。她所谱写的，是这个世界的艺术，最原初的样貌。
  */
+import com.niyredra.common.utils.SortUtils;
 import com.niyredra.common.utils.time_utils.TimeUtils;
 
 import java.util.*;
@@ -27,7 +28,7 @@ public class TimePerformance {
         public static void main(String[] args) {
 
             // Arrays.asList 放前面的时候运行时间会慢一点，同理List.of也是
-            TimeUtils.getTime("3000条数据 Arrays.asList 交叉写入数组 用时", () -> {
+            TimeUtils.printTime("3000条数据 Arrays.asList 交叉写入数组 用时", () -> {
                 List<List<Integer>> arr = new ArrayList<>();
                 for (int i = 0; i < sample.length; i++) {
                     for (int j = i + 1; j < sample.length; j++) {
@@ -37,7 +38,7 @@ public class TimePerformance {
                 System.out.println(arr.size());
             });
 
-            TimeUtils.getTime("3000条数据 List.of 交叉写入数组 用时", () -> {
+            TimeUtils.printTime("3000条数据 List.of 交叉写入数组 用时", () -> {
                 List<List<Integer>> arr = new ArrayList<>();
                 for (int i = 0; i < sample.length; i++) {
                     for (int j = i + 1; j < sample.length; j++) {
@@ -47,7 +48,7 @@ public class TimePerformance {
                 System.out.println(arr.size());
             });
 
-            TimeUtils.getTime("3000条数据 List.add 交叉写入数组 用时", () -> {
+            TimeUtils.printTime("3000条数据 List.add 交叉写入数组 用时", () -> {
                 List<List<Integer>> arr = new ArrayList<>();
                 for (int i = 0; i < sample.length; i++) {
                     for (int j = i + 1; j < sample.length; j++) {
@@ -84,7 +85,7 @@ public class TimePerformance {
             HashSet<Integer> setSample = (HashSet<Integer>) Arrays.stream(largeSample)
                     .boxed()
                     .collect(Collectors.toSet());
-            TimeUtils.getTime(len + "条数据 HashSet查找 用时", () -> {
+            TimeUtils.printTime(len + "条数据 HashSet查找 用时", () -> {
                 System.out.println(
                         setSample.contains(key)
                 );
@@ -94,87 +95,106 @@ public class TimePerformance {
             List<Integer> listSample = Arrays.stream(largeSample)
                     .boxed()
                     .toList();
-            TimeUtils.getTime(len + "条数据 ArrayList查找 用时", () -> {
+            TimeUtils.printTime(len + "条数据 ArrayList查找 用时", () -> {
                 System.out.println(
                         listSample.contains(key)
                 );
             });
 
-            TimeUtils.getTime(len + "条数据 HashMap 用时", () -> {
+            TimeUtils.printTime(len + "条数据 HashMap 用时", () -> {
                 System.out.println(Arrays.binarySearch(sample, 2147483647) > 0);
             });
 
-            TimeUtils.getTime(len + "条数据 Arrays.binarySearch 用时", () -> Arrays.binarySearch(largeSample, key), 1000000);
+            TimeUtils.printTime(len + "条数据 Arrays.binarySearch 用时", () -> Arrays.binarySearch(largeSample, key), 1000000);
 
         }
     }
 
 
     /**
+     *
      * 查看几种不同排序的时间测试用例
      */
     static class SortPerformance {
         public static void main(String[] args) {
+            int len = 100000;  // 十万条数据源
+            int[] largeSample = new int[len];
 
-            TimeUtils.getTime("3000条随机样本数据 Stream Sort",
-                    () -> Arrays.stream(sample.clone()).sorted().boxed().toArray(),
+            System.out.println(">--- 随机样本 ---<");
+            // 随机样本
+            for (int i = 0; i < len - 1; i++)
+                largeSample[i] = new Random().nextInt();
+            TimeUtils.printTime(len + "条随机样本数据 Stream Sort",
+                    () -> Arrays.stream(largeSample.clone()).sorted().boxed().toArray(),
                     1
             );
 
-            TimeUtils.getTime("3000条随机样本数据 Array Sort",
-                    () -> Arrays.sort(sample.clone()),
+            TimeUtils.printTime(len + "条随机样本数据 Array Sort",
+                    () -> Arrays.sort(largeSample.clone()),
                     1
             );
 
-            TimeUtils.getTime("3000条随机样本数据 冒泡排序",
-                    () -> bubble(sample.clone()),
+            TimeUtils.printTime(len + "条随机样本数据 冒泡排序",
+                    () -> SortUtils.bubble(largeSample.clone()),
                     1
             );
 
-            TimeUtils.getTime("3000条随机样本数据 快速排序",
-                    () -> quicksort(sample.clone(), 0, sample.length - 1),
-                    100000
+            TimeUtils.printTime(len + "条随机样本数据 快速排序",
+                    () -> SortUtils.quicksort(largeSample.clone(), 0, largeSample.length - 1),
+                    1
+            );
+
+            System.out.println(">--- 升序样本 ---<");
+
+            // 升序样本
+            for (int i = 0; i < len - 1; i++)
+                largeSample[i] = i;
+            TimeUtils.printTime(len + "条升序样本数据 Stream Sort",
+                    () -> Arrays.stream(largeSample.clone()).sorted().boxed().toArray(),
+                    1
+            );
+
+            TimeUtils.printTime(len + "条升序样本数据 Array Sort",
+                    () -> Arrays.sort(largeSample.clone()),
+                    1
+            );
+
+            TimeUtils.printTime(len + "条升序样本数据 冒泡排序",
+                    () -> SortUtils.bubble(largeSample.clone()),
+                    1
+            );
+
+            TimeUtils.printTime(len + "条升序样本数据 快速排序",
+                    () -> SortUtils.quicksort(largeSample.clone(), 0, largeSample.length - 1),
+                    1
+            );
+
+            System.out.println(">--- 降序样本 ---<");
+            // 降序样本
+            for (int i = 0; i < len - 1; i++)
+                largeSample[i] = len - i;
+            TimeUtils.printTime(len + "条降序样本数据 Stream Sort",
+                    () -> Arrays.stream(largeSample.clone()).sorted().boxed().toArray(),
+                    1
+            );
+
+            TimeUtils.printTime(len + "条降序样本数据 Array Sort",
+                    () -> Arrays.sort(largeSample.clone()),
+                    1
+            );
+
+            TimeUtils.printTime(len + "条降序样本数据 冒泡排序",
+                    () -> SortUtils.bubble(largeSample.clone()),
+                    1
+            );
+
+            TimeUtils.printTime(len + "条降序样本数据 快速排序",
+                    () -> SortUtils.quicksort(largeSample.clone(), 0, largeSample.length - 1),
+                    1
             );
 
         }
 
-        public static void quicksort(int[] arr, int left, int right) {
-            if (right >= left) {
-                int basic = arr[left];
-                int i = left;
-                int j = right;
-                while (i < j) {
-                    while (i < j && arr[j] > basic) {
-                        j--;
-                    }
-                    if (i < j) {
-                        arr[i] = arr[j];
-                        i++;
-                    }
-                    while (i < j && arr[i] < basic) {
-                        i++;
-                    }
-                    if (i < j) {
-                        arr[j] = arr[i];
-                        j--;
-                    }
-                }
-                arr[i] = basic;
-                quicksort(arr, left, i - 1);
-                quicksort(arr, i + 1, right);
-            }
-        }
 
-        public static void bubble(int[] arr) {
-            for (int i = 0; i < arr.length; i++) {
-                for (int j = i; j < arr.length; j++) {
-                    if (arr[i] > arr[j]) {
-                        int tmp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = tmp;
-                    }
-                }
-            }
-        }
     }
 }

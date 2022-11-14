@@ -17,7 +17,6 @@ import com.niyredra.common.utils.StringUtils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Date;
 
 /**
  * 一个有趣的现象：
@@ -36,16 +35,16 @@ public class TimeUtils {
      * @param title    当次测试用例的标记
      * @param callback 具体测试执行内容
      */
-    public static void getTime(String title, TimeUtilsCallback callback) {
+    public static void printTime(String title, TimeUtilsCallback callback) {
         System.out.println("::: " + title + " :::");
-        long begin = System.nanoTime();
-        callback.run();
-        System.out.println("::: 用时: " + BigDecimal.valueOf(System.nanoTime() - begin)
+        System.out.println("::: 用时: " + (BigDecimal.valueOf(System.nanoTime())
+                .subtract(getTime(callback)))
                 .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN)
                 .stripTrailingZeros().toPlainString() + "Ms :::");
         System.out.println(
-                "-----------------------------------------------------------------------------------"
+                "------------------------------------------------------------------------------------"
         );
+
     }
 
     /**
@@ -56,24 +55,46 @@ public class TimeUtils {
      * @param callback 具体测试内容
      * @param epoch    测试次数
      */
-    public static void getTime(String title, TimeUtilsCallback callback, int epoch) {
-        getTime("初次执行 - " + title, callback);
+    public static void printTime(String title, TimeUtilsCallback callback, int epoch) {
+
+        printTime("初次执行 - " + title, callback);
 
         System.out.println("::: " + title + " :::");
-        long begin = System.nanoTime();
-        for (int i = 0; i < epoch; i++) callback.run();
-        BigDecimal end = BigDecimal.valueOf(System.nanoTime() - begin)
-                .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN)
-                .stripTrailingZeros();
+        BigDecimal times = getTime(callback, epoch);
         System.out.println(
                 StringUtils.toString(
-                        "::: 循环 -" + epoch + "- 次 ", "总用时: " + end + "Ms｜", "平均用时: ",
-                        end.divide(BigDecimal.valueOf(epoch), 12, RoundingMode.HALF_DOWN)
+                        "::: 循环 -" + epoch + "- 次 ", "总用时: " + times + "Ms｜", "平均用时: ",
+                        times.divide(BigDecimal.valueOf(epoch), 12, RoundingMode.HALF_DOWN)
                                 .stripTrailingZeros().toPlainString(),
                         "Ms :::\n",
-                        "===================================================================================\n"
-
+                        "====================================================================================\n"
                 )
         );
+    }
+
+    /**
+     * 带返回值的简单的时间测试用例
+     *
+     * @param callback 具体测试执行内容
+     */
+    public static BigDecimal getTime(TimeUtilsCallback callback) {
+        long begin = System.nanoTime();
+        callback.run();
+        return BigDecimal.valueOf(System.nanoTime() - begin)
+                .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN);
+    }
+
+
+    /**
+     * @param callback 具体测试内容
+     * @param epoch    测试次数
+     */
+    public static BigDecimal getTime(TimeUtilsCallback callback, int epoch) {
+        getTime(callback);
+        long begin = System.nanoTime();
+        for (int i = 0; i < epoch; i++) callback.run();
+        return BigDecimal.valueOf(System.nanoTime() - begin)
+                .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN)
+                .stripTrailingZeros();
     }
 }

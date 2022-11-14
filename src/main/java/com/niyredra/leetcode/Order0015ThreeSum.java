@@ -39,7 +39,7 @@ public class Order0015ThreeSum {
      */
     static class Solution2_3_Chart2 {
         public static void main(String[] args) {
-            TimeUtils.getTime("Solution2_3_Chart2", () -> {
+            TimeUtils.printTime("Solution2_3_Chart2", () -> {
 
                 int len = 500;
                 int[] newSample = new int[len + 1];
@@ -99,7 +99,7 @@ public class Order0015ThreeSum {
      */
     static class Solution2_3_Chart1 {
         public static void main(String[] args) {
-            TimeUtils.getTime("Solution2_3_Chart1", () -> {
+            TimeUtils.printTime("Solution2_3_Chart1", () -> {
                 List<List<Integer>> listList = Objects.requireNonNull(Solution2_3_1.threeSum(sample));
 
                 System.out.println(listList.size());
@@ -150,7 +150,7 @@ public class Order0015ThreeSum {
         }
 
         public static void main(String[] args) {
-            TimeUtils.getTime("Solution2_3_1", () -> {
+            TimeUtils.printTime("Solution2_3_1", () -> {
                 List<List<Integer>> listList = Objects.requireNonNull(Solution2_3_1.threeSum(sample));
                 listList.forEach(System.out::println);
                 System.out.println(listList.size());
@@ -181,7 +181,7 @@ public class Order0015ThreeSum {
         }
 
         public static void main(String[] args) {
-            TimeUtils.getTime("Solution2_2", () -> {
+            TimeUtils.printTime("Solution2_2", () -> {
                 List<List<Integer>> listList = Objects.requireNonNull(Solution2_2.threeSum(sample));
                 listList.forEach(System.out::println);
                 System.out.println(listList.size());
@@ -215,7 +215,7 @@ public class Order0015ThreeSum {
         }
 
         public static void main(String[] args) {
-            TimeUtils.getTime("Solution2_1", () -> {
+            TimeUtils.printTime("Solution2_1", () -> {
                 List<List<Integer>> listList = Objects.requireNonNull(Solution2_1.threeSum(sample));
                 listList.forEach(System.out::println);
                 System.out.println(listList.size());
