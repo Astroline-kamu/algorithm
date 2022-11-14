@@ -19,6 +19,8 @@ package com.niyredra.common.utils;
 public class SortUtils {
 
     /**
+     * 升序
+     * <p>
      * 快速排序可能会造成栈溢出的问题
      * 1. 数组长度过大
      * 2. 数组本身是有序的
@@ -55,6 +57,8 @@ public class SortUtils {
     }
 
     /**
+     * 升序
+     * <p>
      * 一个简单的冒泡排序
      *
      * @param arr 被排序对象
@@ -71,6 +75,9 @@ public class SortUtils {
 
 
     /**
+     *
+     * 升序
+     * <p>
      * 希尔排序 以下集中排序代码来自 -> <a href="https://blog.csdn.net/qq_59974657/article/details/123829224">这篇文章</a>
      *
      * @param arr 被排序的数组
@@ -90,6 +97,8 @@ public class SortUtils {
 
 
     /**
+     * 升序
+     * <p>
      * 插入排序
      *
      * @param arr 排序内容
@@ -107,6 +116,13 @@ public class SortUtils {
         }
     }
 
+    /**
+     * 升序
+     * <p>
+     * 选择排序
+     *
+     * @param arr 被修改的数组
+     */
     public static void selection(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {

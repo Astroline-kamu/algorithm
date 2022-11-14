@@ -37,10 +37,7 @@ public class TimeUtils {
      */
     public static void printTime(String title, TimeUtilsCallback callback) {
         System.out.println("::: " + title + " :::");
-        System.out.println("::: 用时: " + (BigDecimal.valueOf(System.nanoTime())
-                .subtract(getTime(callback)))
-                .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN)
-                .stripTrailingZeros().toPlainString() + "Ms :::");
+        System.out.println("::: 用时: " + getTime(callback) + "Ms :::");
         System.out.println(
                 "------------------------------------------------------------------------------------"
         );
@@ -81,7 +78,8 @@ public class TimeUtils {
         long begin = System.nanoTime();
         callback.run();
         return BigDecimal.valueOf(System.nanoTime() - begin)
-                .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN);
+                .divide(BigDecimal.valueOf(1000000), 8, RoundingMode.HALF_DOWN)
+                .stripTrailingZeros();
     }
 
 

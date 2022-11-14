@@ -10,7 +10,9 @@
  *
  * 在这个世界上，即便是物理学也要让她三分。在这个世界上，她实现的东西如算法一般精美，巧妙。她所谱写的，是这个世界的艺术，最原初的样貌。
  */
+
 import com.niyredra.common.utils.SortUtils;
+import com.niyredra.common.utils.StringUtils;
 import com.niyredra.common.utils.time_utils.TimeUtils;
 
 import java.util.*;
@@ -112,7 +114,6 @@ public class TimePerformance {
 
 
     /**
-     *
      * 查看几种不同排序的时间测试用例
      */
     static class SortPerformance {
@@ -121,78 +122,61 @@ public class TimePerformance {
             int[] largeSample = new int[len];
 
             System.out.println(">--- 随机样本 ---<");
-            // 随机样本
             for (int i = 0; i < len - 1; i++)
                 largeSample[i] = new Random().nextInt();
-            TimeUtils.printTime(len + "条随机样本数据 Stream Sort",
-                    () -> Arrays.stream(largeSample.clone()).sorted().boxed().toArray(),
-                    1
-            );
-
-            TimeUtils.printTime(len + "条随机样本数据 Array Sort",
-                    () -> Arrays.sort(largeSample.clone()),
-                    1
-            );
-
-            TimeUtils.printTime(len + "条随机样本数据 冒泡排序",
-                    () -> SortUtils.bubble(largeSample.clone()),
-                    1
-            );
-
-            TimeUtils.printTime(len + "条随机样本数据 快速排序",
-                    () -> SortUtils.quicksort(largeSample.clone(), 0, largeSample.length - 1),
-                    1
-            );
+            sortCollection(len + "条随机样本数据 ", largeSample);
 
             System.out.println(">--- 升序样本 ---<");
-
-            // 升序样本
             for (int i = 0; i < len - 1; i++)
                 largeSample[i] = i;
-            TimeUtils.printTime(len + "条升序样本数据 Stream Sort",
-                    () -> Arrays.stream(largeSample.clone()).sorted().boxed().toArray(),
-                    1
-            );
-
-            TimeUtils.printTime(len + "条升序样本数据 Array Sort",
-                    () -> Arrays.sort(largeSample.clone()),
-                    1
-            );
-
-            TimeUtils.printTime(len + "条升序样本数据 冒泡排序",
-                    () -> SortUtils.bubble(largeSample.clone()),
-                    1
-            );
-
-            TimeUtils.printTime(len + "条升序样本数据 快速排序",
-                    () -> SortUtils.quicksort(largeSample.clone(), 0, largeSample.length - 1),
-                    1
-            );
+            sortCollection(len + "条升序样本数据 ", largeSample);
 
             System.out.println(">--- 降序样本 ---<");
-            // 降序样本
             for (int i = 0; i < len - 1; i++)
                 largeSample[i] = len - i;
-            TimeUtils.printTime(len + "条降序样本数据 Stream Sort",
-                    () -> Arrays.stream(largeSample.clone()).sorted().boxed().toArray(),
+            sortCollection(len + "条降序样本数据 ", largeSample);
+
+        }
+
+
+        private static void sortCollection(String title, int[] samples) {
+
+            TimeUtils.printTime(title + "-> Stream Sort <-",
+                    () -> Arrays.stream(samples.clone()).sorted().boxed().toArray(),
                     1
             );
 
-            TimeUtils.printTime(len + "条降序样本数据 Array Sort",
-                    () -> Arrays.sort(largeSample.clone()),
+            TimeUtils.printTime(title + "-> Array Sort <-",
+                    () -> Arrays.sort(samples.clone()),
                     1
             );
 
-            TimeUtils.printTime(len + "条降序样本数据 冒泡排序",
-                    () -> SortUtils.bubble(largeSample.clone()),
+            TimeUtils.printTime(title + "-> 冒泡排序 <-",
+                    () -> SortUtils.bubble(samples.clone()),
                     1
             );
 
-            TimeUtils.printTime(len + "条降序样本数据 快速排序",
-                    () -> SortUtils.quicksort(largeSample.clone(), 0, largeSample.length - 1),
+            // 快速排序在数据有序且过多的情况会导致栈溢出，原因在于每一层递归需要直到语句结束才能释放
+            if (samples.length <= 10000 || !(title.contains("升序") || title.contains("降序"))) {
+                TimeUtils.printTime(title + "-> 快速排序 <-",
+                        () -> SortUtils.quicksort(samples.clone(), 0, samples.length - 1),
+                        1
+                );
+            }
+            TimeUtils.printTime(title + "-> 希尔排序 <-",
+                    () -> SortUtils.shell(samples.clone()),
                     1
             );
 
+            TimeUtils.printTime(title + "-> 插入排序 <-",
+                    () -> SortUtils.insertion(samples.clone()),
+                    1
+            );
+
+            TimeUtils.printTime(title + "-> 选择排序 <-",
+                    () -> SortUtils.selection(samples.clone()),
+                    1
+            );
         }
 
 

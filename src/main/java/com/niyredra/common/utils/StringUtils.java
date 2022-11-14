@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 /**
  * @author Niyredra Astroline_kamu@outlook.com
  */
-public class StringUtils {
+public class StringUtils{
 
     public static String packagePath(String ...path){
         // 这里顺便提一下，flatMap返回的是对原数据结构的拆分结果，比如说，返回结果原本是一个String[]，在flatMap里就会把里面的元素拆开，和外部元素合并，成为一个新的更大的String[]
