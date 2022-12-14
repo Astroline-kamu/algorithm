@@ -12,9 +12,9 @@
  */
 
 import com.niyredra.common.utils.SortUtils;
-import com.niyredra.common.utils.StringUtils;
 import com.niyredra.common.utils.time_utils.TimeUtils;
 
+import java.lang.reflect.Method;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -78,16 +78,29 @@ public class TimePerformance {
             int key = 740175918;
             int keyIdx = 4999999;
             int[] largeSample = new int[len];
+            List<Integer> largeListSample = new ArrayList<>();
             // 生成专有Sample
-            for (int i = 0; i < len - 1; i++)
+            for (int i = 0; i < len - 1; i++) {
                 largeSample[i] = new Random().nextInt();
+                largeListSample.add(i);
+            }
+
             largeSample[keyIdx] = key;
 
 
-            HashSet<Integer> setSample = (HashSet<Integer>) Arrays.stream(largeSample)
+            HashSet<Integer> hashSetSample = (HashSet<Integer>) Arrays.stream(largeSample)
                     .boxed()
                     .collect(Collectors.toSet());
             TimeUtils.printTime(len + "条数据 HashSet查找 用时", () -> {
+                System.out.println(
+                        hashSetSample.contains(key)
+                );
+            });
+
+            Set<Integer> setSample = Arrays.stream(largeSample)
+                    .boxed()
+                    .collect(Collectors.toSet());
+            TimeUtils.printTime(len + "条数据 Set 用时", () -> {
                 System.out.println(
                         setSample.contains(key)
                 );
@@ -103,11 +116,91 @@ public class TimePerformance {
                 );
             });
 
-            TimeUtils.printTime(len + "条数据 HashMap 用时", () -> {
+            TimeUtils.printTime(len + "条数据 BinarySearch 用时", () -> {
                 System.out.println(Arrays.binarySearch(sample, 2147483647) > 0);
             });
 
             TimeUtils.printTime(len + "条数据 Arrays.binarySearch 用时", () -> Arrays.binarySearch(largeSample, key), 1000000);
+
+
+            // todo 暂时存放 集合工具操作性能测试
+            TimeUtils.printTime(len + "条数据 Collections.convert 用时", () -> {
+                Collections.reverse(largeListSample);
+            });
+
+            TimeUtils.printTime(len + "条数据 Math.pow 用时", () -> {
+                 double x = Math.pow(32, 2);
+            });
+
+            TimeUtils.printTime(len + "条数据 x * x 用时", () -> {
+                double x = 32 * 32;
+            });
+
+            TimeUtils.printTime(len + "条数据 Math.sqrt (Math.pow) 用时", () -> {
+                 double x = Math.sqrt(Math.pow(32, 2));
+            });
+
+            TimeUtils.printTime(len + "条数据 Math.sqrt (x * x) 用时", () -> {
+                double x = Math.sqrt(32 * 32);
+            });
+
+
+        }
+    }
+
+    static class LoopPerformance {
+        public static void main(String[] args) {
+
+            HashMap<String, Method> hashMap = new HashMap<String, Method>();
+            System.out.println(hashMap.get("i dont know what the flip this thing!"));
+
+
+            int len = 5000000;
+            // 生成专有Sample
+            List<Integer> list = new ArrayList<>(len);
+
+            TimeUtils.printTime(len + "条数据 for循环", () -> {
+                for (int i = 0; i < len; i++) {
+                }
+            }, 1);
+
+            TimeUtils.printTime(len + "条数据 while循环", () -> {
+                int i = 0;
+                while (++i < len) {
+                }
+            }, 1);
+
+            TimeUtils.printTime(len + "条数据 stream.peek循环", () -> {
+                list.stream().peek(e -> {
+                });
+            }, 1);
+
+            TimeUtils.printTime(len + "条数据 forEach循环", () -> {
+                for (Integer integer : list) {
+
+                }
+            }, 1);
+
+
+            TimeUtils.printTime(len + "条数据 forEach + i循环", () -> {
+                int i = 0;
+                for (Integer integer : list) {
+                    i++;
+                }
+            }, 1);
+
+            TimeUtils.printTime(len + "条数据 iterator + i循环", () -> {
+                int i = 0;
+                Iterator<Integer> iterator = list.iterator();
+                while (iterator.hasNext()) {
+                    i++;
+                }
+            }, 1);
+
+            TimeUtils.printTime(len + "条数据 .forEach循环", () -> {
+                list.forEach(e -> {
+                });
+            }, 1);
 
         }
     }

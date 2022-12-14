@@ -42,7 +42,8 @@ public class PureTextDicSearch {
         TimeUtils.printTime("Equals Search Result", () -> System.out.println(searchEquals(searchKeyEquals)));
 
         // 特殊用法 取到所有匹配到的点
-//        TimeUtils.getTime("Equals Search Result" , () -> searchEqualsAndReturn(searchKeyEquals).forEach(System.out::println));
+//        TimeUtils.printTime("Equals Search Result" ,
+//        () -> searchEqualsAndReturn(searchKeyEquals).forEach(System.out::println));
 
         TimeUtils.printTime("General All Contains", () ->
                 System.out.println(

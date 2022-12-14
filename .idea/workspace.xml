@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
+    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="还是那个排序性能分析，但是封装了">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0004FindMedianSortedArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/各种排序方式的效率分析（数据）" beforeDir="false" afterPath="$PROJECT_DIR$/blog/各种排序方式的效率分析（数据）" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SortUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SortUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/time_utils/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/time_utils/TimeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/各种排序方式的效率分析（数据）" beforeDir="false" afterPath="$PROJECT_DIR$/blog/各种排序方式的效率分析（数据）.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/TextSearch/src/PureTextDicSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/TextSearch/src/PureTextDicSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0001TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0001TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0015ThreeSum.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TimePerformance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TimePerformance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/TextSearch/src/PureTextDicSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/TextSearch/src/PureTextDicSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/common/utils/time_utils/TimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/common/utils/time_utils/TimeUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/niyredra/leetcode/Order0015ThreeSum$Solution2_3_1.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +75,16 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/eve/Code/Niyredra/Java/Algorithm&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -95,9 +98,22 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TimePerformance$SortPerformance">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.TextSearch.src.Main" />
+  <component name="RunManager" selected="Application.TimePerformance$CollectionContainsApiPerformance">
+    <configuration name="Order0015ThreeSum$Solution2_3_Chart2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum$Solution2_3_Chart2" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PureTextDicSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.TextSearch.src.PureTextDicSearch" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
@@ -109,41 +125,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Order0015ThreeSum$Solution2_3_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum$Solution2_3_1" />
+    <configuration name="TimePerformance$CollectionContainsApiPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TimePerformance$CollectionContainsApiPerformance" />
       <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Order0015ThreeSum$Solution2_3_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum$Solution2_3_2" />
+    <configuration name="TimePerformance$LoopPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TimePerformance$LoopPerformance" />
       <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Order0015ThreeSum$Solution2_3_Chart2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0015ThreeSum$Solution2_3_Chart2" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -226,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TimePerformance$CollectionContainsApiPerformance" />
+        <item itemvalue="Application.TimePerformance$LoopPerformance" />
+        <item itemvalue="Application.PureTextDicSearch" />
         <item itemvalue="Application.TimePerformance$SortPerformance" />
         <item itemvalue="Application.Order0015ThreeSum$Solution2_3_Chart2" />
-        <item itemvalue="Application.Order0015ThreeSum$Solution2_3_2" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Order0015ThreeSum$Solution2_3_1" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +237,21 @@
       <workItem from="1667638804761" duration="39937000" />
       <workItem from="1667792390853" duration="31674000" />
       <workItem from="1668349093297" duration="7626000" />
-      <workItem from="1668428273984" duration="6569000" />
+      <workItem from="1668428273984" duration="11450000" />
+      <workItem from="1668794518829" duration="989000" />
+      <workItem from="1668865652470" duration="888000" />
+      <workItem from="1669019560736" duration="114000" />
+      <workItem from="1669021782226" duration="66000" />
+      <workItem from="1669026058929" duration="704000" />
+      <workItem from="1669085352947" duration="235000" />
+      <workItem from="1669173957157" duration="593000" />
+      <workItem from="1669178837637" duration="556000" />
+      <workItem from="1669213835776" duration="355000" />
+      <workItem from="1669214256794" duration="446000" />
+      <workItem from="1669224850146" duration="870000" />
+      <workItem from="1669367555229" duration="220000" />
+      <workItem from="1670836941108" duration="5337000" />
+      <workItem from="1671019504376" duration="1384000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -353,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668431850535</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="还是那个排序性能分析，但是封装了">
+      <created>1668434936485</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668434936485</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +391,11 @@
     <MESSAGE value="更新了时间分析工具的分析逻辑" />
     <MESSAGE value="更强大的时间分析工具！！" />
     <MESSAGE value="增加了一个排序类库" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了一个排序类库" />
+    <MESSAGE value="还是那个排序性能分析，但是封装了" />
+    <option name="LAST_COMMIT_MESSAGE" value="还是那个排序性能分析，但是封装了" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
