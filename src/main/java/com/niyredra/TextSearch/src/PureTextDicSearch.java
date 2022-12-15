@@ -27,7 +27,6 @@ public class PureTextDicSearch {
 
     static HashMap<Character, List<Integer>> dic = getDic(getSample());
 
-
     public static void main(String[] args) {
 
         String searchKeyEquals = "人设";
