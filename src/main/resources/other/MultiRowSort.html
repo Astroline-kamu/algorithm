@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ECharts Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.2.2/echarts.min.js"
+        integrity="sha512-ivdGNkeO+FTZH5ZoVC4gS4ovGSiWc+6v60/hvHkccaMN2BXchfKdvEZtviy5L4xSpF8NPsfS0EVNSGf+EsUdxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #title-container {
+            width: 1200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #download-btn {
+            border-radius: 6px;
+            background-color: aliceblue;
+            border: 1px solid black;
+        }
+
+        #display-container {
+            width: 1200px;
+            height: 900px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="title-container">
+            <h1 class="display">ECharts Java</h1>
+            <button id="download-btn" onclick="downloadImage()">Download Image</button>
+        </div>
+        <div id="display-container">
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        function downloadImage() {
+            let canvas = document.querySelector("canvas");
+            let image = canvas.toDataURL("image/png").replace("image/png",
+                "image/octet-stream");
+            let fakeLink = document.createElement("a");
+            if (typeof fakeLink.download === "string") {
+                document.body.appendChild(fakeLink);
+                fakeLink.download = "echart.png";
+                fakeLink.href = image;
+                fakeLink.click();
+                document.body.removeChild(fakeLink);
+            } else {
+                location.replace(image);
+            }
+        }
+        var chart = echarts.init(document.getElementById("display-container")); 
+        var option = {"xAxis":[{"type":"category","data":["0","1","2","3","4","5","6","7","8","9","10","11","0"],"boundaryGap":true}],"yAxis":[{"type":"value"}],"tooltip":{"trigger":"Tooltip"},"series":[{"type":"line","name":"爪数多级排序","data":[271.591751,1048.86988,1240.27801,1531.492213,1764.994302,2049.763784,2116.824106,2847.188813,2585.061648,2943.581799,2997.829685,3162.980363],"areaStyle":{}},{"type":"line","name":"默认多级排序","data":[524.162418,1268.131376,1730.41375,3722.109981,4471.414057,5366.864591,6236.983115,7125.219992,7886.040769,8729.593198,9710.571558,10527.166025],"areaStyle":{}}]}
+        chart.setOption(option);
+    </script>
+</body>
+
+</html>

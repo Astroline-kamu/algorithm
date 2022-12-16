@@ -16,7 +16,11 @@ package com.niyredra.leetcode;
 
 import com.niyredra.common.constant.ConstantPath;
 import com.niyredra.common.utils.time_utils.TimeUtils;
+import org.icepear.echarts.Line;
 import org.icepear.echarts.Scatter;
+import org.icepear.echarts.charts.line.LineAreaStyle;
+import org.icepear.echarts.charts.line.LineSeries;
+import org.icepear.echarts.components.coord.cartesian.CategoryAxis;
 import org.icepear.echarts.render.Engine;
 
 import java.util.*;
