@@ -16,8 +16,13 @@ package com.niyredra.common.utils;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ *
+ * todo 未来引用redis进行缓存，使其可以短期静态化数据行进性能比对
+ */
 public class SampleUtils {
 
+    static final int[] defaultIntMatrixValRange = new int[]{(int) (0 - Math.pow(2, 31)), (int) (Math.pow(2, 31) - 1)};
 
     public static int[] getLargeIntArraySample() {
         int len = 100000;  // 100000
@@ -27,5 +32,70 @@ public class SampleUtils {
     public static int[] getLargeIntArraySample(int len) {
         return Arrays.stream(new int[len])
                 .map(bound -> new Random().nextInt(10000 * 2 + 1) - 10000).toArray();
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public static int[][] getIntMatrixSample() {
+        return getIntMatrixSample(200, defaultIntMatrixValRange);
+    }
+
+    public static int[][] getIntMatrixSample(int len) {
+        return getIntMatrixSample(len, defaultIntMatrixValRange);
+    }
+
+    public static int[][] getIntMatrixSample(int len, int[] valRange) {
+        return getIntMatrixSample(len, len, valRange);
+    }
+
+
+    public static int[][] getIntMatrixSample(int col, int row, int[] valRange) {
+        return getIntMatrixSample(new int[]{col}, new int[]{row}, valRange);
+    }
+
+    public static int[][] getIntMatrixSample(int[] colRange, int[] rowRange, int[] valRange) {
+        if (valRange.length != 2) throw new RuntimeException("无效的数据取值范围！");
+
+        int colLen = randomInt(colRange),
+                rowLen = randomInt(rowRange);
+
+        return Arrays.stream(new int[colLen][rowLen])
+                .map(col -> Arrays.stream(col)
+                        .map(bound -> randomInt(valRange))
+                        .toArray()
+                ).toArray(int[][]::new);
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    public static int[][] getSetZeroesSample() {
+
+        int[][] result = getIntMatrixSample();
+
+        // x, y
+        int
+                x = result.length,  // 列数
+                y = result[0].length;  // 行数
+
+        // 给多少个0（包含重复）
+        for (int i = 0; i < (x * y) / 100; i++) {
+            result[new Random().nextInt(x)][new Random().nextInt(y)] = 0;
+        }
+
+        return result;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    private static int randomInt(int[] range) {
+        assert range.length <= 2 && range.length > 0;
+        if (range.length == 1) range = new int[]{range[0], range[0]};
+
+        long max, min;
+        max = min = range[0];
+
+        if (range[0] < range[1]) max = range[1];
+        else min = range[1];
+
+        return (int) (new Random().nextLong(max - min + 1) + min);
     }
 }
