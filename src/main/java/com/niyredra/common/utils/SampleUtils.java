@@ -17,7 +17,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- *
  * todo 未来引用redis进行缓存，使其可以短期静态化数据行进性能比对
  */
 public class SampleUtils {
@@ -25,13 +24,30 @@ public class SampleUtils {
     static final int[] defaultIntMatrixValRange = new int[]{(int) (0 - Math.pow(2, 31)), (int) (Math.pow(2, 31) - 1)};
 
     public static int[] getLargeIntArraySample() {
-        int len = 100000;  // 100000
+        int len = (int) Math.pow(10, 5);  // 100000
         return getLargeIntArraySample(len);
     }
 
     public static int[] getLargeIntArraySample(int len) {
+        int[] range = {(int) (0 - Math.pow(10, 6)), (int) Math.pow(10, 6)};
+        return getLargeIntArraySample(len, range);
+    }
+
+    public static int[] getLargeIntArraySample(int len, int[] range) {
         return Arrays.stream(new int[len])
-                .map(bound -> new Random().nextInt(10000 * 2 + 1) - 10000).toArray();
+                .map(bound -> randomInt(range)).toArray();
+    }
+
+    public static int[] getSortedLargeIntArraySample() {
+        return Arrays.stream(getLargeIntArraySample()).sorted().toArray();
+    }
+
+    public static int[] getSortedLargeIntArraySample(int len) {
+        return Arrays.stream(getLargeIntArraySample(len)).sorted().toArray();
+    }
+
+    public static int[] getSortedLargeIntArraySample(int len, int[] range) {
+        return Arrays.stream(getLargeIntArraySample(len, range)).sorted().toArray();
     }
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -85,6 +101,10 @@ public class SampleUtils {
     }
 
     // -----------------------------------------------------------------------------------------------------------------
+
+    public static int[] rangeGenerate(int min, int max) {
+        return new int[]{min, max};
+    }
 
     private static int randomInt(int[] range) {
         assert range.length <= 2 && range.length > 0;
