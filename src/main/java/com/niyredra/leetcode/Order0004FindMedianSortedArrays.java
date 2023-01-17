@@ -13,31 +13,55 @@
 
 package com.niyredra.leetcode;
 
+import com.niyredra.common.utils.SampleUtils;
 import com.niyredra.common.utils.time_utils.TimeUtils;
 
 import java.util.*;
 
 public class Order0004FindMedianSortedArrays {
 
-
-    /**
-     * 时间 Timeout
-     * in sample case ... 去重循环了 135890361 次
-     * same at sample case ... 用时 62963 Ms
-     */
+    // 时间优先解法
     static class Solution1 {
+
+        // num1[1, 4, 5, 7]
+        // num2[0, 1, 8, 9]
+
+        // n20 n11 n21 n14 n15 n17 n28 n29
+        // (4 + 5) / 2 4.5
         public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-            return 0d;
+
+            int i, i1, i2, len = nums1.length + nums2.length;
+            int[] arr = new int[len];
+            i = i1 = i2 = 0;
+
+            while (len - 1 >= i) {
+
+                if (i1 == nums1.length) {
+                    while (i2 < nums2.length) arr[i++] = nums2[i2++];
+                    break;
+                }else if (i2 == nums2.length) {
+                    while (i1 < nums1.length) arr[i++] = nums1[i1++];
+                    break;
+                }
+
+                if (nums1[i1] < nums2[i2]) arr[i++] = nums1[i1++];
+                else arr[i++] = nums2[i2++];
+
+            }
+            return len % 2 == 0
+                    ? (arr[len / 2 - 1] + arr[len / 2]) * .5
+                    : arr[(len - 1) / 2];
         }
 
         public static void main(String[] args) {
-            int[] nums1 = new int[0];
-            int[] nums2 = new int[0];
+            int[] nums1 = SampleUtils.getSortedLargeIntArraySample(1000);
+            int[] nums2 = SampleUtils.getSortedLargeIntArraySample(1000);
+
             TimeUtils.printTime("Find Median Sorted Arrays Solution1", () -> {
                 System.out.println("输入参数：\n" +
                         "nums1 = " + Arrays.toString(nums1) + "\n" +
                         "nums2 = " + Arrays.toString(nums2) + "\n" +
-                        "输出结果：" + Order0004FindMedianSortedArrays.Solution1.findMedianSortedArrays(nums1, nums2)
+                        "输出结果：" + Order0004FindMedianSortedArrays.Solution1.findMedianSortedArrays(new int[]{1, 3}, new int[]{2})
                 );
             });
         }
