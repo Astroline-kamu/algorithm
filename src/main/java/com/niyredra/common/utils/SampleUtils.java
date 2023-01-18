@@ -13,8 +13,10 @@
 
 package com.niyredra.common.utils;
 
+import java.lang.ref.WeakReference;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.Stream;
 
 /**
  * todo 未来引用redis进行缓存，使其可以短期静态化数据行进性能比对
@@ -34,8 +36,11 @@ public class SampleUtils {
     }
 
     public static int[] getLargeIntArraySample(int len, int[] range) {
-        return Arrays.stream(new int[len])
-                .map(bound -> randomInt(range)).toArray();
+        WeakReference<int[]> reference = new WeakReference<>(
+                Arrays.stream(new int[len])
+                        .map(bound -> randomInt(range)).toArray()
+        );
+        return reference.get();
     }
 
     public static int[] getSortedLargeIntArraySample() {
