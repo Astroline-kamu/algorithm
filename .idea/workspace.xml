@@ -4,35 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="leetcode 第88题 合并两个有序数组">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson2_fastjson2_2_0_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_5_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/machinet.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/RelationshipGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/bo/StructReturnValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/struct/RelationshipStruct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0044WildcardMatching.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graph/relationship/MemberRelationship.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/graph/relationship/RelationshipGraphTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/graph/relationship/helper/CalculateHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/graph/relationship/struct/RelationshipStructTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/leetcode/Order0044WildcardMatchingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" beforeDir="false" />
+    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/constant/ConstantPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/constant/ConstantPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0088MergeSortedArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0088MergeSortedArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/RelationshipGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/RelationshipGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +333,7 @@
       <workItem from="1679108932288" duration="982000" />
       <workItem from="1680609805836" duration="6888000" />
       <workItem from="1680665825876" duration="418000" />
-      <workItem from="1680666327121" duration="10631000" />
+      <workItem from="1680666327121" duration="18920000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -540,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674014081354</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="一个用来展示元素关系的图表实现的原型">
+      <created>1680689967191</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1680689967191</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +536,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="代码初始化" />
     <MESSAGE value="增加了一个时间处理工具" />
     <MESSAGE value="字典查询，差不多就是这样了，很显然原本的时间复杂度是O(n)，字典本身其实也是O(n)，但是不一样的是判断，大概吧" />
     <MESSAGE value="想必已经看出来了，这个仓库其实就是用来刷leetcode的。。。" />
@@ -577,7 +560,8 @@
     <MESSAGE value="leetcode 第88题 合并两个有序数组" />
     <MESSAGE value="增加了一个弱引用" />
     <MESSAGE value="leetcode 第88题 合并两个有序数组 另外一种非原地算法思路和原地算法思路" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode 第88题 合并两个有序数组 另外一种非原地算法思路和原地算法思路" />
+    <MESSAGE value="一个用来展示元素关系的图表实现的原型" />
+    <option name="LAST_COMMIT_MESSAGE" value="一个用来展示元素关系的图表实现的原型" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

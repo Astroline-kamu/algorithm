@@ -20,6 +20,7 @@ import lombok.SneakyThrows;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
 public class RelationshipGraph {
     public static void main(String[] args) {
@@ -43,7 +44,8 @@ class Animation extends JPanel {
         new Timer(10, e -> {
             CalculateHelper.updatePosition(
                     this.value.getNodeList(),
-                    this.value.getEdgeList()
+                    this.value.getEdgeList(),
+                    1280, 960
             );
             repaint();
         }).start();
@@ -53,11 +55,19 @@ class Animation extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+
         int pos = 500;
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(Color.DARK_GRAY);
+        g2d.setBackground(Color.DARK_GRAY);
 
         value.getNodeList().forEach(node -> {
-            g.setColor(Color.DARK_GRAY);
-            g.fillOval(pos + (int) node.getX(), pos + (int) node.getY(), 15, 15);
+//            Node source = edge.getSource();
+//            Node target = edge.getTarget();
+
+//            Ellipse2D.Double circle = ;
+            g2d.draw(new Ellipse2D.Double(pos + node.getX(), pos + node.getY(), 15, 15));
+//            g2d.draw(new Ellipse2D.Double(pos + node.getX(), pos + node.getY(), 15, 15));
         });
 
     }

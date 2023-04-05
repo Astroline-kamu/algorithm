@@ -20,24 +20,29 @@ import java.util.List;
 
 public class CalculateHelper {
 
-    private final static double kRepel = 200D;
-    private final static double kAttract = .1;
+    private final static double kRepel = 20D;
+    private final static double kAttract = .01;
     private final static double timeStep = .01;
 
-
-
-    public static void calculateForce(List<Node> nodeList, List<Edge> edgeList) {
+    public static void calculateForce(List<Node> nodeList, List<Edge> edgeList, int width, int height) {
         // 赤痢 当距离越近，赤痢越大
+//        System.out.println("::: Separator :::");
         for (Node source :
                 nodeList) {
+            // todo 当在一定位置的时候 每个节点添加四个边界节点，用来进行反馈
             for (Node target :
                     nodeList) {
                 if (source == target) continue;
 
                 double dx = target.getX() - source.getX();
                 double dy = target.getY() - source.getY();
+
                 double distance = getDistance(dx, dy);
+//                System.out.println("dx - " + dx + " | dy - " + dy + " | distance - " + distance);
                 if (distance > 0) {
+                    // kRepel / distance 求距离缩放后的排斥力
+                    // dx / distance 求出x轴上的速度分量
+
                     double repel = kRepel / distance;
                     source.setVx(source.getVx() - repel * dx / distance);
                     source.setVy(source.getVy() - repel * dy / distance);
@@ -54,10 +59,11 @@ public class CalculateHelper {
             double dx = target.getX() - source.getX();
             double dy = target.getY() - source.getY();
             double distance = getDistance(dx, dy);
+//            System.out.println(distance);
             if (distance > 0) {
                 double attract = kAttract * distance;
-                source.setVx(source.getVx() - attract * dx / distance);
-                source.setVy(source.getVy() - attract * dy / distance);
+                source.setVx(source.getVx() + attract * dx / distance);
+                source.setVy(source.getVy() + attract * dy / distance);
 
                 target.setVx(target.getVx() - attract * dx / distance);
                 target.setVy(target.getVy() - attract * dy / distance);
@@ -65,8 +71,8 @@ public class CalculateHelper {
         }
     }
 
-    public static void updatePosition(List<Node> nodeList, List<Edge> edgeList){
-            calculateForce(nodeList, edgeList);
+    public static void updatePosition(List<Node> nodeList, List<Edge> edgeList, int width, int height){
+            calculateForce(nodeList, edgeList, width, height);
             nodeList.forEach(node -> {
                 node.setX(node.getX() + node.getVx() * timeStep);
                 node.setY(node.getY() + node.getVy() * timeStep);
