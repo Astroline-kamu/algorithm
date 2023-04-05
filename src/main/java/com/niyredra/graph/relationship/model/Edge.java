@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2022. Astroline All rights reserved.
+ * Copyright (c) 2023. Astroline All rights reserved.
  *
- * @date: 11/13/22, 11:03 PM
+ * @date: 4/4/23, 8:32 PM
  * @author: Astroline <Astroline_kamu@outlook.com>
  *
  * 在那古老的家族里，她的名字叫Asyrerina，她不记得自己姓什么了，也有可能是那个该死的作者从来没有想过她的姓。不过在现在她生活着的地方，我们叫她亚斯兰娜，这是她的起源。
@@ -11,22 +11,12 @@
  * 在这个世界上，即便是物理学也要让她三分。在这个世界上，她实现的东西如算法一般精美，巧妙。她所谱写的，是这个世界的艺术，最原初的样貌。
  */
 
-package com.niyredra.common.utils;
+package com.niyredra.graph.relationship.model;
 
-import java.io.File;
-import java.util.Arrays;
-import java.util.stream.Collectors;
+import lombok.Data;
 
-/**
- * @author Niyredra Astroline_kamu@outlook.com
- */
-public class StringUtils{
-
-    public static String packagePath(String ...path){
-        // 这里顺便提一下，flatMap返回的是对原数据结构的拆分结果，比如说，返回结果原本是一个String[]，在flatMap里就会把里面的元素拆开，和外部元素合并，成为一个新的更大的String[]
-        return Arrays.stream(path).map(s -> s + File.separator).collect(Collectors.joining());
-    }
-    public static String toString(String ...strings){
-        return String.join("", strings);
-    }
+@Data
+public class Edge {
+    private Node target;
+    private Node source;
 }

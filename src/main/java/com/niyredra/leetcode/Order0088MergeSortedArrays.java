@@ -71,11 +71,8 @@ public class Order0088MergeSortedArrays {
             int[] nums1 = SampleUtils.getSortedLargeIntArraySample(400, new int[]{(int) (0 - Math.pow(10, 9)), (int) Math.pow(10, 9)});
             int[] nums2 = SampleUtils.getSortedLargeIntArraySample(200, new int[]{(int) (0 - Math.pow(10, 9)), (int) Math.pow(10, 9)});
 
-
-//            int[] num1 = new int[]{1, 2, 4, 5, 6, 0};
-//            int[] num1 = new int[]{4,0,0,0,0,0};
             int[] num1 = new int[]{1,2,3,0,0,0};
-            TimeUtils.printTime("Find Median Sorted Arrays Solution1", () -> {
+            TimeUtils.printTime("Merge Two Sorted Arrays Solution2", () -> {
                 Order0088MergeSortedArrays.Solution2.merge(num1, 3, new int[]{2,5,6}, 3);
                 System.out.println("输出结果：" + Arrays.toString(num1));
             });
@@ -110,7 +107,7 @@ public class Order0088MergeSortedArrays {
             int[] nums2 = SampleUtils.getSortedLargeIntArraySample(200, new int[]{(int) (0 - Math.pow(10, 9)), (int) Math.pow(10, 9)});
 
             int[] num1 = new int[]{1,2,3,0,0,0};
-            TimeUtils.printTime("Find Median Sorted Arrays Solution1", () -> {
+            TimeUtils.printTime("Merge Two Sorted Arrays Solution1", () -> {
                 Order0088MergeSortedArrays.Solution1.merge(num1, 3, new int[]{2, 5, 6}, 3);
                 System.out.println("输出结果：" + Arrays.toString(num1));
             });

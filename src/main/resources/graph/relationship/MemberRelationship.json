@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Astroline",
+    "relationship": [
+      "Bing",
+      "Eve",
+      "Niyredra",
+      "Money"
+    ]
+  },
+  {
+    "name": "Bing",
+    "relationship": [
+      "Astroline",
+      "Money",
+      "小何"
+    ]
+  },
+  {
+    "name": "Money",
+    "relationship": [
+      "Astroline",
+      "Bing",
+      "小何",
+      "益光"
+    ]
+  }
+]

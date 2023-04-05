@@ -23,4 +23,9 @@ public class ConstantPath {
     public static final String resourcePath =
             StringUtils.packagePath(System.getProperty("user.dir"), "src", "main", "resources");
 
+    public static final String graphRelationshipPath =
+            StringUtils.packagePath(resourcePath, "graph", "relationship");
+
+
+
 }
