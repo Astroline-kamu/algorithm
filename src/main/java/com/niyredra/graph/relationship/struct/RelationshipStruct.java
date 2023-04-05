@@ -41,36 +41,23 @@ public class RelationshipStruct {
             ));
         }
 
-        double margin = 20;
+        Double margin = 20.0D;
         AtomicReference<Double> y = new AtomicReference<>((double) 0);
-
-        // todo 写一个去重 为什么不现在写，因为我想看看一个包含重复数据的图是什么样子的qwq
-        // 预测结果：MemberRelationship变成了三个群组，每个群组有多个点连线
         memberList.forEach(member -> {
-
             AtomicReference<Double> x = new AtomicReference<>((double) 0);
-            y.set(y.get() + margin);
-
-            Node node = new Node();
-            node.setX(x.get());
-            node.setY(y.get());
-
-            nodeMap.putIfAbsent(member.getName(), node);
-            for (String name : member.getRelationship()) {
-                x.set(x.get() + margin);
-
-                Node shipNode = new Node();
-                Edge shipEdge = new Edge();
-
-                shipNode.setX(x.get());
-                shipNode.setY(y.get());
-                shipEdge.setSource(node);
-                shipEdge.setTarget(shipNode);
-
-                edgeList.add(shipEdge);
-                nodeMap.putIfAbsent(name, shipNode);
+            nodeMap.putIfAbsent(member.getName(), new Node(x.getAndSet(x.get() + margin), y.getAndSet(y.get() + margin)));
+            for (String relationship:
+                    member.getRelationship()) {
+                nodeMap.putIfAbsent(relationship, new Node(x.getAndSet(x.get() + margin), y.get()));
+                if (!Objects.equals(relationship, member.getName())) {
+                    Edge edge = new Edge();
+                    edge.setSource(nodeMap.get(member.getName()));
+                    edge.setTarget(nodeMap.get(relationship));
+                    edgeList.add(edge);
+                }
             }
         });
+
 
         return new StructReturnValue(nodeMap.values().stream().toList(), edgeList);
     }

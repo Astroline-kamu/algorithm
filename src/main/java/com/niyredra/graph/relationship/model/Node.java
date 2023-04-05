@@ -17,6 +17,12 @@ import lombok.Data;
 
 @Data
 public class Node {
+
+    public Node(){}
+    public Node(double x, double y){
+        this.x = x;
+        this.y = y;
+    }
     private double x;
     private double y;
     private double vx;

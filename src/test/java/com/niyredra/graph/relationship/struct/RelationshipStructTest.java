@@ -14,9 +14,25 @@
 package com.niyredra.graph.relationship.struct;
 
 import com.niyredra.graph.relationship.bo.StructReturnValue;
+import com.niyredra.graph.relationship.model.Node;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 class RelationshipStructTest {
+
+    @Test
+    void mapSetTest(){
+        Map<String, Node> nodeMap = new HashMap<>();
+        nodeMap.putIfAbsent("Test", new Node(12, 5));
+        List<Node> nodeList = nodeMap.values().stream().toList();
+        System.out.println(nodeList);
+        nodeMap.get("Test").setVx(1);
+        System.out.println(nodeList);
+
+    }
 
     @Test
     void getRelationshipStruct() {
