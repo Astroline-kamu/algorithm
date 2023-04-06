@@ -22,8 +22,9 @@ import java.util.List;
 public class CalculateHelper {
 
     private final static double kRepel = 20D;
-    private final static double kAttract = .01;
+    private final static double kAttract = .05;
     private final static double timeStep = .1;
+    private final static double slope = 2;
 
     public static void calculateForce(List<Node> nodeList, List<Edge> edgeList, int width, int height) {
         // 赤痢 当距离越近，赤痢越大
@@ -31,7 +32,8 @@ public class CalculateHelper {
         for (Node source :
                 nodeList) {
 
-            // 除非我可以优化成一次计算得到所有节点的速度信息，否则不考虑为每个节点添加四个边界节点的方法
+            // 除非我可以优化成一次计算得到所有节点的速度信息，否则暂不考虑为每个节点添加四个边界节点的方法
+            // 并且如果非要这么做的话 也需要一个边界约束，不能让节点过线
 
             // todo 当在一定位置的时候 每个节点添加四个边界节点，用来进行反馈
             for (Node target :
@@ -48,19 +50,37 @@ public class CalculateHelper {
 
                     // 收敛边界 mark 这里可能需要source.x - source.vx来预先计算出距离
                     // todo 添加节点大小信息 根据大小来收敛
-                    if (source.getX() > width - 20) {
-                        setDistanceData(distance, source, new Node(source.getX() + 20, source.getY()));
-                    } else if (source.getX() < 20) {
-                        setDistanceData(distance, source, new Node(source.getX() - 20, source.getY()));
+                    // todo node修改成公用元素，无需不停创建
+                    if (source.getX() > width - source.getRadius()) {
+                        setDistanceData(distance, source, new Node(source.getX() + kRepel, source.getY()));
+                    } else if (source.getX() < 0) {
+                        setDistanceData(distance, source, new Node(source.getX() - kRepel, source.getY()));
                     }
                     setVelocity(source, distance);
 
-                    if (source.getY() > height - 20) {
-                        setDistanceData(distance, source, new Node(source.getX(), source.getY() + 20));
-                    } else if (source.getY() < 20) {
-                        setDistanceData(distance, source, new Node(source.getX(), source.getY() - 20));
+                    if (source.getY() > height - source.getRadius()) {
+                        setDistanceData(distance, source, new Node(source.getX(), source.getY() + kRepel));
+                    } else if (source.getY() < 0) {
+                        setDistanceData(distance, source, new Node(source.getX(), source.getY() - kRepel));
                     }
                     setVelocity(source, distance);
+
+                    // 另一种收敛方式 对全局有效 边缘节点是可移动的，当节点越逼近边缘节点，对节点对外的移动距离就越小，但是始终在节点外面
+//                    System.out.println(width + 1 / (1 + exp((source.getX() - width) / slope)));
+                    // mark 看起来效果并不理想
+//                    if (source.getX() > (double) width / 2) {
+//                        setDistanceData(distance, source, new Node(width + getBoundary(width - source.getX()), source.getY()));
+//                    } else {
+//                        setDistanceData(distance, source, new Node(-getBoundary(source.getX()), source.getY()));
+//                    }
+//                    setVelocity(source, distance);
+//                    if (source.getY() > (double) height / 2) {
+//                        setDistanceData(distance, source, new Node(source.getX(), height + getBoundary(height - source.getY())));
+//                    } else {
+//                        setDistanceData(distance, source, new Node(source.getX(), -getBoundary(source.getY())));
+//                    }
+//                    setVelocity(source, distance);
+
                 }
 
             }
@@ -92,14 +112,21 @@ public class CalculateHelper {
             node.setX(node.getX() + node.getVx() * timeStep);
             node.setY(node.getY() + node.getVy() * timeStep);
 
-
             // 收敛运动速度
-            if (node.getVx() > 0) node.setVx(node.getVx() * .9);
             if (node.getVy() > 0) node.setVy(node.getVy() * .9);
+            else if (node.getVy() < 0) node.setVy(node.getVy() * .9);
 
-            if (node.getVx() < 0) node.setVx(node.getVx() * .9);
-            if (node.getVy() < 0) node.setVy(node.getVy() * .9);
+            if (node.getVx() > 0) node.setVx(node.getVx() * .9);
+            else if (node.getVx() < 0) node.setVx(node.getVx() * .9);
         });
+    }
+
+    // 当x > 0的时候，f(x) = x ^ 0.5，当x < 0的时候，f(x) = x + x ^ 0.5
+    // 如果能有一个公式可以完成这个我会更开心的
+    private static double getBoundary(double x) {
+        return x > 0 ?
+                Math.pow(x, .5)
+                : -x + Math.pow(x, .5);
     }
 
     private static void setVelocity(Node node, NodeDistance distance) {

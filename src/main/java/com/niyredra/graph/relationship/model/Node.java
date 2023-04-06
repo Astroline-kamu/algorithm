@@ -28,10 +28,16 @@ public class Node {
         this(x, y);
         this.name = name;
     }
+    public Node(double x, double y, String name, int radius){
+        this(x, y, name);
+        this.radius = radius;
+    }
     private double x;
     private double y;
     private double vx;
     private double vy;
 
     private String name;
+    // todo radius是半径的意思吧？？我是不是要给换成直径啊，这个确实是直径诶
+    private int radius;
 }

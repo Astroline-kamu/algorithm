@@ -46,8 +46,6 @@ class Animation extends JPanel {
     private final int width = 1280;
     private final int height = 960;
 
-    private final int radius = 15;
-
     StructReturnValue value = RelationshipStruct.getRelationshipStruct();
 
     Animation() {
@@ -72,14 +70,14 @@ class Animation extends JPanel {
         g2d.setBackground(Color.DARK_GRAY);
 
         value.getNodeList().forEach(node -> {
-            g2d.draw(new Ellipse2D.Double(pos + node.getX(), pos + node.getY(), radius, radius));
+            g2d.draw(new Ellipse2D.Double(pos + node.getX(), pos + node.getY(), node.getRadius(), node.getRadius()));
             g2d.drawString(node.getName(), (float) (pos + node.getX()), (float) (pos + node.getY()));
         });
 
         value.getEdgeList().forEach(edge -> {
             Node source = edge.getSource();
             Node target = edge.getTarget();
-            g2d.draw(new Line2D.Double((radius >> 1) + pos + source.getX(), (radius >> 1) + pos + source.getY(), (radius >> 1) + pos + target.getX(), (radius >> 1) + pos + target.getY() ));
+            g2d.draw(new Line2D.Double((source.getRadius() >> 1) + pos + source.getX(), (source.getRadius() >> 1) + pos + source.getY(), (source.getRadius() >> 1) + pos + target.getX(), (source.getRadius() >> 1) + pos + target.getY() ));
         });
 
     }
