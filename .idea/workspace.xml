@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="一个包含重复节点的例子，不可用，所以被迫优化= =">
+    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/bo/NodeDistance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/RelationshipGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/RelationshipGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/struct/RelationshipStruct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/struct/RelationshipStruct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/niyredra/graph/relationship/struct/RelationshipStructTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/graph/relationship/struct/RelationshipStructTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/graph/relationship/MemberRelationship.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graph/relationship/MemberRelationship.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,29 +91,29 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "idea.background.editor": "/Users/eve/background library/Blur Version/STE8169.jpg,21,scale,center",
-    "last_opened_file_path": "/Users/eve/Code/Niyredra/Java/Algorithm",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.41605243",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;idea.background.editor&quot;: &quot;/Users/eve/background library/Blur Version/STE8169.jpg,21,scale,center&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/eve/Code/Niyredra/Java/Algorithm&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.41605243&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -133,7 +137,7 @@
       <recent name="com.niyredra.multi_row_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RelationshipStructTest.mapSetTest">
+  <component name="RunManager" selected="Application.RelationshipGraph">
     <configuration name="Order0044WildcardMatching" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0044WildcardMatching" />
       <module name="Algorithm" />
@@ -279,8 +283,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RelationshipStructTest.mapSetTest" />
         <item itemvalue="Application.RelationshipGraph" />
+        <item itemvalue="JUnit.RelationshipStructTest.mapSetTest" />
         <item itemvalue="JUnit.RelationshipStructTest.getRelationshipStruct" />
         <item itemvalue="JUnit.CalculateHelperTest.lambdaTest" />
         <item itemvalue="Application.Order0044WildcardMatching" />
@@ -331,7 +335,8 @@
       <workItem from="1679108932288" duration="982000" />
       <workItem from="1680609805836" duration="6888000" />
       <workItem from="1680665825876" duration="418000" />
-      <workItem from="1680666327121" duration="20561000" />
+      <workItem from="1680666327121" duration="26925000" />
+      <workItem from="1680748550205" duration="4181000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -529,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680703994151</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Edge的内容现在也是个对象啦">
+      <created>1680705805403</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1680705805403</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +553,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="字典查询，差不多就是这样了，很显然原本的时间复杂度是O(n)，字典本身其实也是O(n)，但是不一样的是判断，大概吧" />
     <MESSAGE value="想必已经看出来了，这个仓库其实就是用来刷leetcode的。。。" />
     <MESSAGE value="leetcode 15 Solution1_1 | Solution1_2" />
     <MESSAGE value="leetcode 15 Solution2_1 第一套成功原型 2553 ms" />
@@ -566,7 +577,8 @@
     <MESSAGE value="leetcode 第88题 合并两个有序数组 另外一种非原地算法思路和原地算法思路" />
     <MESSAGE value="一个用来展示元素关系的图表实现的原型" />
     <MESSAGE value="一个包含重复节点的例子，不可用，所以被迫优化= =" />
-    <option name="LAST_COMMIT_MESSAGE" value="一个包含重复节点的例子，不可用，所以被迫优化= =" />
+    <MESSAGE value="Edge的内容现在也是个对象啦" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edge的内容现在也是个对象啦" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

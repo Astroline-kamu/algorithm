@@ -15,12 +15,17 @@ package com.niyredra.graph.relationship;
 
 import com.niyredra.graph.relationship.bo.StructReturnValue;
 import com.niyredra.graph.relationship.helper.CalculateHelper;
+import com.niyredra.graph.relationship.model.Node;
 import com.niyredra.graph.relationship.struct.RelationshipStruct;
 import lombok.SneakyThrows;
 
+
+// Package 'javax.swing' is declared in module 'java.desktop', which is not in the module graph
+// add '--add-modules java.desktop' to module compiler options
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
 
 public class RelationshipGraph {
     public static void main(String[] args) {
@@ -38,6 +43,11 @@ public class RelationshipGraph {
 
 class Animation extends JPanel {
 
+    private final int width = 1280;
+    private final int height = 960;
+
+    private final int radius = 15;
+
     StructReturnValue value = RelationshipStruct.getRelationshipStruct();
 
     Animation() {
@@ -45,7 +55,7 @@ class Animation extends JPanel {
             CalculateHelper.updatePosition(
                     this.value.getNodeList(),
                     this.value.getEdgeList(),
-                    1280, 960
+                    width, height
             );
             repaint();
         }).start();
@@ -56,18 +66,20 @@ class Animation extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        int pos = 500;
+        double pos = 0;
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(Color.DARK_GRAY);
         g2d.setBackground(Color.DARK_GRAY);
 
         value.getNodeList().forEach(node -> {
-//            Node source = edge.getSource();
-//            Node target = edge.getTarget();
+            g2d.draw(new Ellipse2D.Double(pos + node.getX(), pos + node.getY(), radius, radius));
+            g2d.drawString(node.getName(), (float) (pos + node.getX()), (float) (pos + node.getY()));
+        });
 
-//            Ellipse2D.Double circle = ;
-            g2d.draw(new Ellipse2D.Double(pos + node.getX(), pos + node.getY(), 15, 15));
-//            g2d.draw(new Ellipse2D.Double(pos + node.getX(), pos + node.getY(), 15, 15));
+        value.getEdgeList().forEach(edge -> {
+            Node source = edge.getSource();
+            Node target = edge.getTarget();
+            g2d.draw(new Line2D.Double((radius >> 1) + pos + source.getX(), (radius >> 1) + pos + source.getY(), (radius >> 1) + pos + target.getX(), (radius >> 1) + pos + target.getY() ));
         });
 
     }

@@ -23,8 +23,15 @@ public class Node {
         this.x = x;
         this.y = y;
     }
+
+    public Node(double x, double y, String name){
+        this(x, y);
+        this.name = name;
+    }
     private double x;
     private double y;
     private double vx;
     private double vy;
+
+    private String name;
 }

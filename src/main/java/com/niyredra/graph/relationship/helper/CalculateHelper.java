@@ -13,6 +13,7 @@
 
 package com.niyredra.graph.relationship.helper;
 
+import com.niyredra.graph.relationship.bo.NodeDistance;
 import com.niyredra.graph.relationship.model.Edge;
 import com.niyredra.graph.relationship.model.Node;
 
@@ -22,31 +23,46 @@ public class CalculateHelper {
 
     private final static double kRepel = 20D;
     private final static double kAttract = .01;
-    private final static double timeStep = .01;
+    private final static double timeStep = .1;
 
     public static void calculateForce(List<Node> nodeList, List<Edge> edgeList, int width, int height) {
         // 赤痢 当距离越近，赤痢越大
 //        System.out.println("::: Separator :::");
         for (Node source :
                 nodeList) {
+
+            // 除非我可以优化成一次计算得到所有节点的速度信息，否则不考虑为每个节点添加四个边界节点的方法
+
             // todo 当在一定位置的时候 每个节点添加四个边界节点，用来进行反馈
             for (Node target :
                     nodeList) {
                 if (source == target) continue;
 
-                double dx = target.getX() - source.getX();
-                double dy = target.getY() - source.getY();
+                NodeDistance distance = new NodeDistance();
+                setDistanceData(distance, source, target);
 
-                double distance = getDistance(dx, dy);
 //                System.out.println("dx - " + dx + " | dy - " + dy + " | distance - " + distance);
-                if (distance > 0) {
-                    // kRepel / distance 求距离缩放后的排斥力
-                    // dx / distance 求出x轴上的速度分量
+//                System.out.println("vx - " + source.getVx() + " | vy - " + source.getVy());
+                if (distance.getDistance() > 0) {
+                    setVelocity(source, distance);
 
-                    double repel = kRepel / distance;
-                    source.setVx(source.getVx() - repel * dx / distance);
-                    source.setVy(source.getVy() - repel * dy / distance);
+                    // 收敛边界 mark 这里可能需要source.x - source.vx来预先计算出距离
+                    // todo 添加节点大小信息 根据大小来收敛
+                    if (source.getX() > width - 20) {
+                        setDistanceData(distance, source, new Node(source.getX() + 20, source.getY()));
+                    } else if (source.getX() < 20) {
+                        setDistanceData(distance, source, new Node(source.getX() - 20, source.getY()));
+                    }
+                    setVelocity(source, distance);
+
+                    if (source.getY() > height - 20) {
+                        setDistanceData(distance, source, new Node(source.getX(), source.getY() + 20));
+                    } else if (source.getY() < 20) {
+                        setDistanceData(distance, source, new Node(source.getX(), source.getY() - 20));
+                    }
+                    setVelocity(source, distance);
                 }
+
             }
         }
 
@@ -56,34 +72,61 @@ public class CalculateHelper {
             Node source = edge.getSource();
             Node target = edge.getTarget();
 
-            double dx = target.getX() - source.getX();
-            double dy = target.getY() - source.getY();
-            double distance = getDistance(dx, dy);
-//            System.out.println(distance);
-            if (distance > 0) {
-                double attract = kAttract * distance;
-                source.setVx(source.getVx() + attract * dx / distance);
-                source.setVy(source.getVy() + attract * dy / distance);
+            NodeDistance distance = new NodeDistance();
+            setDistanceData(distance, source, target);
 
-                target.setVx(target.getVx() - attract * dx / distance);
-                target.setVy(target.getVy() - attract * dy / distance);
+            if (distance.getDistance() > 0) {
+                double attract = kAttract * distance.getDistance();
+                source.setVx(source.getVx() + attract * distance.getDx() / distance.getDistance());
+                source.setVy(source.getVy() + attract * distance.getDy() / distance.getDistance());
+
+                target.setVx(target.getVx() - attract * distance.getDx() / distance.getDistance());
+                target.setVy(target.getVy() - attract * distance.getDy() / distance.getDistance());
             }
         }
     }
 
-    public static void updatePosition(List<Node> nodeList, List<Edge> edgeList, int width, int height){
-            calculateForce(nodeList, edgeList, width, height);
-            nodeList.forEach(node -> {
-                node.setX(node.getX() + node.getVx() * timeStep);
-                node.setY(node.getY() + node.getVy() * timeStep);
-            });
+    public static void updatePosition(List<Node> nodeList, List<Edge> edgeList, int width, int height) {
+        calculateForce(nodeList, edgeList, width, height);
+        nodeList.forEach(node -> {
+            node.setX(node.getX() + node.getVx() * timeStep);
+            node.setY(node.getY() + node.getVy() * timeStep);
+
+
+            // 收敛运动速度
+//            if (node.getVx() > 0) node.setVx(node.getVx() * .9);
+//            if (node.getVy() > 0) node.setVy(node.getVy() * .9);
+//
+//            if (node.getVx() < 0) node.setVx(node.getVx() * .9);
+//            if (node.getVy() < 0) node.setVy(node.getVy() * .9);
+        });
     }
 
-    private static double getDistance(double x, double y){
+    private static void setVelocity(Node node, NodeDistance distance) {
+        // kRepel / distance 求距离缩放后的排斥力
+        // dx / distance 求出x轴上的速度分量
+        double repel = kRepel / distance.getDistance();
+        node.setVx(node.getVx() - repel * distance.getDx() / distance.getDistance());
+        node.setVy(node.getVy() - repel * distance.getDy() / distance.getDistance());
+
+    }
+
+    /**
+     * @param distance 距离
+     * @param source   源 赤痢方向
+     * @param target   目标节点
+     */
+    private static void setDistanceData(NodeDistance distance, Node source, Node target) {
+        distance.setDx(target.getX() - source.getX());
+        distance.setDy(target.getY() - source.getY());
+        distance.setDistance(getDistance(distance.getDx(), distance.getDy()));
+    }
+
+    private static double getDistance(double x, double y) {
         return getMod(x, y);
     }
 
-    private static double getDistance(Node source, Node target){
+    private static double getDistance(Node source, Node target) {
         return getMod(source.getX() - target.getX(), source.getY() - target.getY());
     }
 

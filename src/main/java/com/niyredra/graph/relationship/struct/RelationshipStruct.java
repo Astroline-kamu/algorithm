@@ -41,24 +41,28 @@ public class RelationshipStruct {
             ));
         }
 
-        Double margin = 20.0D;
+        Double margin = 100.0D;
         AtomicReference<Double> y = new AtomicReference<>((double) 0);
+        Set<String> nameList = new HashSet<>();
         memberList.forEach(member -> {
             AtomicReference<Double> x = new AtomicReference<>((double) 0);
-            nodeMap.putIfAbsent(member.getName(), new Node(x.getAndSet(x.get() + margin), y.getAndSet(y.get() + margin)));
-            for (String relationship:
+            nodeMap.putIfAbsent(member.getName(), new Node(x.getAndSet(x.get() + margin), y.getAndSet(y.get() + margin), member.getName()));
+            for (String relationship :
                     member.getRelationship()) {
-                nodeMap.putIfAbsent(relationship, new Node(x.getAndSet(x.get() + margin), y.get()));
+                nodeMap.putIfAbsent(relationship, new Node(x.getAndSet(x.get() + margin), y.get(), relationship));
+                if (nameList.contains(member.getName() + relationship)) continue;
                 if (!Objects.equals(relationship, member.getName())) {
                     Edge edge = new Edge();
                     edge.setSource(nodeMap.get(member.getName()));
                     edge.setTarget(nodeMap.get(relationship));
                     edgeList.add(edge);
+                    
+                    // 去重
+                    nameList.add(member.getName() + relationship);
+                    nameList.add(relationship + member.getName());
                 }
             }
         });
-
-
         return new StructReturnValue(nodeMap.values().stream().toList(), edgeList);
     }
 }
