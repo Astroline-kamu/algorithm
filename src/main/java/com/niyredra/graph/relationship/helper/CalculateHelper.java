@@ -94,11 +94,11 @@ public class CalculateHelper {
 
 
             // 收敛运动速度
-//            if (node.getVx() > 0) node.setVx(node.getVx() * .9);
-//            if (node.getVy() > 0) node.setVy(node.getVy() * .9);
-//
-//            if (node.getVx() < 0) node.setVx(node.getVx() * .9);
-//            if (node.getVy() < 0) node.setVy(node.getVy() * .9);
+            if (node.getVx() > 0) node.setVx(node.getVx() * .9);
+            if (node.getVy() > 0) node.setVy(node.getVy() * .9);
+
+            if (node.getVx() < 0) node.setVx(node.getVx() * .9);
+            if (node.getVy() < 0) node.setVy(node.getVy() * .9);
         });
     }
 

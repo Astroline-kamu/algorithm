@@ -30,7 +30,7 @@ import java.awt.geom.Line2D;
 public class RelationshipGraph {
     public static void main(String[] args) {
 
-        JFrame frame = new JFrame("Circle Example");
+        JFrame frame = new JFrame("Relationship Graph");
 
         frame.add(new Animation());
 
