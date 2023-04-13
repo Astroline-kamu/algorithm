@@ -29,17 +29,20 @@ public class TreeNodePrinter {
 
         List<TreeNode> temporaryList = new ArrayList<>();
 
-        long count1 = tree.stream().filter(Objects::nonNull).peek(node -> {
-            System.out.print(node.val + " ");
-            temporaryList.add(node.left);
-            temporaryList.add(node.right);
-        }).count();
+        tree.forEach(node -> {
+            if (node == null) System.out.print("null ");
+            else {
+                System.out.print(node.val + " ");
+                temporaryList.add(node.left);
+                temporaryList.add(node.right);
+            }
+        });
 
         System.out.println();
-        System.out.print("-------------");
-        System.out.println(tree.size() + " + " + count1);
+        System.out.print("------------- ");
+        System.out.println(tree.size());
 
-        if (count1 > 0) print(temporaryList);
+        if (temporaryList.stream().anyMatch(Objects::nonNull)) print(temporaryList);
     }
 
 }

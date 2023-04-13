@@ -9,7 +9,11 @@
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SampleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SampleUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNodePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNodePrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/niyredra/common/utils/SampleUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/common/utils/SampleUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +138,20 @@
       <recent name="com.niyredra.multi_row_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SampleUtilsTest.getTreeNodeSampleTest">
+  <component name="RunManager" selected="Application.Order0863DistanceK$Solution">
+    <configuration name="Order0863DistanceK$Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0863DistanceK$Solution" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RelationshipGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niyredra.graph.relationship.RelationshipGraph" />
       <module name="Algorithm" />
@@ -144,22 +161,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculateHelperTest.lambdaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.graph.relationship.helper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.niyredra.graph.relationship.helper" />
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.graph.relationship.helper.CalculateHelperTest" />
-      <option name="METHOD_NAME" value="lambdaTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -283,11 +284,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Order0863DistanceK$Solution" />
         <item itemvalue="JUnit.SampleUtilsTest.getTreeNodeSampleTest" />
         <item itemvalue="Application.RelationshipGraph" />
         <item itemvalue="JUnit.RelationshipStructTest.mapSetTest" />
         <item itemvalue="JUnit.RelationshipStructTest.getRelationshipStruct" />
-        <item itemvalue="JUnit.CalculateHelperTest.lambdaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -340,6 +341,7 @@
       <workItem from="1680849517502" duration="34000" />
       <workItem from="1681081702906" duration="263000" />
       <workItem from="1681307344720" duration="9201000" />
+      <workItem from="1681375194073" duration="4586000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -572,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681367873575</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="稍微简化了下TreeNode样本生成工具 删了点注释">
+      <created>1681375376990</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1681375376990</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +593,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="增加了一个图表组件库" />
     <MESSAGE value="三数之和 更新了另外的解题思路，但是还未实现" />
     <MESSAGE value="三数之和 稍微过滤了一下生成图表的空数据 - 代码分析时间太长了" />
     <MESSAGE value="三数之和 图表分析 Stream流转换数据格式" />
@@ -609,7 +617,8 @@
     <MESSAGE value="原型完成，还有部分细节，以及真正要实现的功能未实现" />
     <MESSAGE value="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）" />
     <MESSAGE value="863. 二叉树中所有距离为 K 的结点&#10;完成了数据的生成以及打印工具" />
-    <option name="LAST_COMMIT_MESSAGE" value="863. 二叉树中所有距离为 K 的结点&#10;完成了数据的生成以及打印工具" />
+    <MESSAGE value="稍微简化了下TreeNode样本生成工具 删了点注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="稍微简化了下TreeNode样本生成工具 删了点注释" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

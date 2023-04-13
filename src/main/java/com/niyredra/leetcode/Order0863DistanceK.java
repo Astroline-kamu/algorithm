@@ -15,17 +15,33 @@ package com.niyredra.leetcode;
 
 import com.niyredra.common.utils.SampleUtils;
 import com.niyredra.common.utils.TreeNode;
+import com.niyredra.common.utils.TreeNodePrinter;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Order0863DistanceK {
     static class Solution {
         public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
+            HashMap<Integer, TreeNode> parentNode = new HashMap<>();
+            TreeNode cur = root;
+            for (; ; ) {
+                parentNode.put(cur.val, cur);
+                if (cur == target) break;
+                cur = cur.left;
+                if (cur == target) break;
+                cur = cur.right;
+            }
             return null;
         }
+
         public static void main(String[] args) {
 
-            TreeNode treeNodeSample = SampleUtils.getTreeNodeSample();
+            TreeNode treeNodeSample = SampleUtils.getTreeNodeSample(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4});
+            System.out.println(treeNodeSample.val);
+            System.out.println(treeNodeSample.left.val);
+            System.out.println(treeNodeSample.right.val);
+            TreeNodePrinter.print(treeNodeSample);
 
 //            new Order0863DistanceK.Solution().distanceK()
         }

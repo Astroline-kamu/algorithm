@@ -14,8 +14,10 @@
 package com.niyredra.common.utils;
 
 import java.lang.ref.WeakReference;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 /**
  * todo 未来引用redis进行缓存，使其可以短期静态化数据行进性能比对
@@ -61,12 +63,16 @@ public class SampleUtils {
 
     public static TreeNode getTreeNodeSample(int len, int[] range) {
         int[] largeIntArraySample = getLargeIntArraySample(len, range);
-        Integer[] source = Arrays.stream(largeIntArraySample)
-                .boxed()
-                .collect(Collectors.toCollection(HashSet::new))
+        return getTreeNodeSample(Arrays.stream(largeIntArraySample).boxed().toArray(Integer[]::new));
+    }
+
+    public static TreeNode getTreeNodeSample(Integer[] ints) {
+        Integer[] source = Arrays.stream(ints)
+                // 去重，但是null按理说应该不在重复的范畴里？
+                // 其次，需要用LinkedHashSet，否则自动排序了= =
+//                .collect(Collectors.toCollection(HashSet::new))
                 .toArray(Integer[]::new);
         TreeNode tree = new TreeNode(source[0]);
-        System.out.println(Arrays.toString(source));
 
         nextTree(new ArrayList<>() {{
             add(tree);
@@ -93,7 +99,6 @@ public class SampleUtils {
             }
 
         if (integers.length > idx) nextTree(nodeList, integers, idx);
-
     }
 
     private static void setNode(TreeNode tree, Integer[] integers, Integer idx) {

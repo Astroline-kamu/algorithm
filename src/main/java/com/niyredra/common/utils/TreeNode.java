@@ -18,7 +18,7 @@ public class TreeNode {
         this.val = x;
     }
 
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 }

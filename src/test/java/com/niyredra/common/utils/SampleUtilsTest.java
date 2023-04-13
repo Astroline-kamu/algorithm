@@ -37,6 +37,7 @@ public class SampleUtilsTest {
     //
     @Test
     public void getTreeNodeSampleTest(){
+
         TreeNodePrinter.print(SampleUtils.getTreeNodeSample());
     }
 
