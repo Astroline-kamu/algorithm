@@ -3,15 +3,19 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BookmarksViewState">
+    <option name="rewriteBookmarkType" value="true" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNodePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/RelationshipGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/RelationshipGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SampleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SampleUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/model/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/struct/RelationshipStruct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/struct/RelationshipStruct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/graph/relationship/MemberRelationship.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/graph/relationship/MemberRelationship.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/niyredra/common/utils/SampleUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/common/utils/SampleUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,20 +140,7 @@
       <recent name="com.niyredra.multi_row_sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RelationshipGraph">
-    <configuration name="Order0044WildcardMatching" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0044WildcardMatching" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SampleUtilsTest.getTreeNodeSampleTest">
     <configuration name="RelationshipGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niyredra.graph.relationship.RelationshipGraph" />
       <module name="Algorithm" />
@@ -206,6 +197,22 @@
       <option name="PACKAGE_NAME" value="com.niyredra.graph.relationship.struct" />
       <option name="MAIN_CLASS_NAME" value="com.niyredra.graph.relationship.struct.RelationshipStructTest" />
       <option name="METHOD_NAME" value="mapSetTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleUtilsTest.getTreeNodeSampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.niyredra.common.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.common.utils.SampleUtilsTest" />
+      <option name="METHOD_NAME" value="getTreeNodeSampleTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -282,11 +289,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SampleUtilsTest.getTreeNodeSampleTest" />
         <item itemvalue="Application.RelationshipGraph" />
         <item itemvalue="JUnit.RelationshipStructTest.mapSetTest" />
         <item itemvalue="JUnit.RelationshipStructTest.getRelationshipStruct" />
         <item itemvalue="JUnit.CalculateHelperTest.lambdaTest" />
-        <item itemvalue="Application.Order0044WildcardMatching" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +342,10 @@
       <workItem from="1680609805836" duration="6888000" />
       <workItem from="1680665825876" duration="418000" />
       <workItem from="1680666327121" duration="26925000" />
-      <workItem from="1680748550205" duration="19826000" />
+      <workItem from="1680748550205" duration="19861000" />
+      <workItem from="1680849517502" duration="34000" />
+      <workItem from="1681081702906" duration="263000" />
+      <workItem from="1681307344720" duration="8740000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -554,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680766363133</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）">
+      <created>1680799595479</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1680799595479</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +583,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="leetcode 15 Solution2_1 第一套成功原型 2553 ms" />
     <MESSAGE value="进化成了Maven项目！" />
     <MESSAGE value="增加了一个图表组件库" />
     <MESSAGE value="三数之和 更新了另外的解题思路，但是还未实现" />
@@ -591,7 +607,8 @@
     <MESSAGE value="Edge的内容现在也是个对象啦" />
     <MESSAGE value="收敛了边界，暂时注释掉了速度的收敛代码" />
     <MESSAGE value="原型完成，还有部分细节，以及真正要实现的功能未实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="原型完成，还有部分细节，以及真正要实现的功能未实现" />
+    <MESSAGE value="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

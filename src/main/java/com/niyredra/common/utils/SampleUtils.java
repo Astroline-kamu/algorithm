@@ -14,9 +14,8 @@
 package com.niyredra.common.utils;
 
 import java.lang.ref.WeakReference;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.stream.Stream;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * todo 未来引用redis进行缓存，使其可以短期静态化数据行进性能比对
@@ -54,6 +53,78 @@ public class SampleUtils {
     public static int[] getSortedLargeIntArraySample(int len, int[] range) {
         return Arrays.stream(getLargeIntArraySample(len, range)).sorted().toArray();
     }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    public static TreeNode getTreeNodeSample() {
+        return getTreeNodeSample(500, new int[]{0, 500});
+    }
+
+    public static TreeNode getTreeNodeSample(int len, int[] range) {
+        int[] largeIntArraySample = getLargeIntArraySample(len, range);
+        Integer[] source = Arrays.stream(largeIntArraySample)
+                .boxed()
+                .collect(Collectors.toCollection(HashSet::new))
+                .toArray(Integer[]::new);
+        TreeNode tree = new TreeNode(source[0]);
+        System.out.println(Arrays.toString(source));
+
+        nextTree(new ArrayList<>() {{
+            add(tree);
+        }}, source, 0);
+
+        return tree;
+    }
+
+    private static void nextTree(List<TreeNode> rootList, Integer[] integers, Integer idx) {
+
+        if (integers.length > idx) {
+            List<TreeNode> nodeList = new ArrayList<>();
+            for (TreeNode root : rootList) {
+                if (integers.length > ++idx)
+                    if (integers[idx] != null)
+                        root.left = new TreeNode(integers[idx]);
+                    else if (integers[idx] == null) root.left = null;
+//            else return;
+                if (integers.length > ++idx)
+                    if (integers[idx] != null)
+                        root.right = new TreeNode(integers[idx]);
+                    else if (integers[idx] == null) root.right = null;
+//            else return;
+
+                if (root.left != null) nodeList.add(root.left);
+                if (root.right != null) nodeList.add(root.right);
+            }
+
+            nextTree(nodeList, integers, idx);
+        }
+//        if (integers[idx] == null) tree.left = null;
+//        if (integers[idx] == null) tree.right = null;
+//        if (integers.length > idx)
+//            tree.left = new TreeNode(integers[idx++]);
+//        if (integers.length > idx)
+//            tree.right = new TreeNode(integers[idx++]);
+//
+//
+//        for (TreeNode node :
+//                nodeList) {
+//            setTree(node, integers, idx);
+//
+//        }
+//
+//        setNode(tree.left, integers, idx);
+//        setNode(tree.right, integers, idx);
+//
+//        setTree(tree, integers, idx);
+    }
+
+    private static void setNode(TreeNode tree, Integer[] integers, Integer idx) {
+        if (integers.length > idx)
+            tree.left = new TreeNode(integers[idx++]);
+        if (integers.length > idx)
+            tree.right = new TreeNode(integers[idx++]);
+
+    }
+
 
     // -----------------------------------------------------------------------------------------------------------------
     public static int[][] getIntMatrixSample() {

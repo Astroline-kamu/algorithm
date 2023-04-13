@@ -135,7 +135,6 @@ public class CalculateHelper {
         double repel = kRepel / distance.getDistance();
         node.setVx(node.getVx() - repel * distance.getDx() / distance.getDistance());
         node.setVy(node.getVy() - repel * distance.getDy() / distance.getDistance());
-
     }
 
     /**

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. Astroline All rights reserved.
  *
- * @date: 1/1/23, 12:54 PM
+ * @date: 4/13/23, 12:26 PM
  * @author: Astroline <Astroline_kamu@outlook.com>
  *
  * 在那古老的家族里，她的名字叫Asyrerina，她不记得自己姓什么了，也有可能是那个该死的作者从来没有想过她的姓。不过在现在她生活着的地方，我们叫她亚斯兰娜，这是她的起源。
@@ -13,32 +13,12 @@
 
 package com.niyredra.common.utils;
 
-import org.junit.Test;
-
-import java.util.Arrays;
-
-public class SampleUtilsTest {
-
-    @Test
-    public void getIntMatrixSampleTest() {
-        for (int[] ints : SampleUtils.getIntMatrixSample()) {
-            System.out.println(Arrays.toString(ints));
-        }
+public class TreeNode {
+    TreeNode(int x) {
+        this.val = x;
     }
 
-    @Test
-    public void getSetZeroesSampleTest() {
-        for (int[] ints : SampleUtils.getSetZeroesSample()) {
-            System.out.println(Arrays.toString(ints));
-        }
-    }
-
-
-    //
-    @Test
-    public void getTreeNodeSampleTest(){
-        TreeNodePrinter.print(SampleUtils.getTreeNodeSample());
-    }
-
-
+    int val;
+    TreeNode left;
+    TreeNode right;
 }

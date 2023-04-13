@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. Astroline All rights reserved.
  *
- * @date: 1/1/23, 12:54 PM
+ * @date: 4/13/23, 12:18 PM
  * @author: Astroline <Astroline_kamu@outlook.com>
  *
  * 在那古老的家族里，她的名字叫Asyrerina，她不记得自己姓什么了，也有可能是那个该死的作者从来没有想过她的姓。不过在现在她生活着的地方，我们叫她亚斯兰娜，这是她的起源。
@@ -11,34 +11,29 @@
  * 在这个世界上，即便是物理学也要让她三分。在这个世界上，她实现的东西如算法一般精美，巧妙。她所谱写的，是这个世界的艺术，最原初的样貌。
  */
 
-package com.niyredra.common.utils;
+package com.niyredra.leetcode;
 
-import org.junit.Test;
+import com.niyredra.common.utils.SampleUtils;
+import com.niyredra.common.utils.TreeNode;
 
-import java.util.Arrays;
+import java.util.List;
 
-public class SampleUtilsTest {
+public class Order0863DistanceK {
+    static class Solution {
+        public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
 
-    @Test
-    public void getIntMatrixSampleTest() {
-        for (int[] ints : SampleUtils.getIntMatrixSample()) {
-            System.out.println(Arrays.toString(ints));
+
+            return null;
+
         }
-    }
+        public static void main(String[] args) {
 
-    @Test
-    public void getSetZeroesSampleTest() {
-        for (int[] ints : SampleUtils.getSetZeroesSample()) {
-            System.out.println(Arrays.toString(ints));
+            TreeNode treeNodeSample = SampleUtils.getTreeNodeSample();
+
+//            new Order0863DistanceK.Solution().distanceK()
         }
-    }
-
-
-    //
-    @Test
-    public void getTreeNodeSampleTest(){
-        TreeNodePrinter.print(SampleUtils.getTreeNodeSample());
     }
 
 
 }
+
