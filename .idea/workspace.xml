@@ -7,15 +7,9 @@
     <option name="rewriteBookmarkType" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNodePrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java" afterDir="false" />
+    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SampleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SampleUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/graph/relationship/helper/CalculateHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/niyredra/common/utils/SampleUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/common/utils/SampleUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +339,7 @@
       <workItem from="1680748550205" duration="19861000" />
       <workItem from="1680849517502" duration="34000" />
       <workItem from="1681081702906" duration="263000" />
-      <workItem from="1681307344720" duration="8740000" />
+      <workItem from="1681307344720" duration="9201000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -571,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680799595479</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="863. 二叉树中所有距离为 K 的结点&#10;完成了数据的生成以及打印工具">
+      <created>1681367873575</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681367873575</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +584,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="进化成了Maven项目！" />
     <MESSAGE value="增加了一个图表组件库" />
     <MESSAGE value="三数之和 更新了另外的解题思路，但是还未实现" />
     <MESSAGE value="三数之和 稍微过滤了一下生成图表的空数据 - 代码分析时间太长了" />
@@ -608,7 +608,8 @@
     <MESSAGE value="收敛了边界，暂时注释掉了速度的收敛代码" />
     <MESSAGE value="原型完成，还有部分细节，以及真正要实现的功能未实现" />
     <MESSAGE value="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）" />
+    <MESSAGE value="863. 二叉树中所有距离为 K 的结点&#10;完成了数据的生成以及打印工具" />
+    <option name="LAST_COMMIT_MESSAGE" value="863. 二叉树中所有距离为 K 的结点&#10;完成了数据的生成以及打印工具" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

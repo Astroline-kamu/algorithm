@@ -77,44 +77,23 @@ public class SampleUtils {
 
     private static void nextTree(List<TreeNode> rootList, Integer[] integers, Integer idx) {
 
-        if (integers.length > idx) {
             List<TreeNode> nodeList = new ArrayList<>();
             for (TreeNode root : rootList) {
                 if (integers.length > ++idx)
                     if (integers[idx] != null)
                         root.left = new TreeNode(integers[idx]);
                     else if (integers[idx] == null) root.left = null;
-//            else return;
                 if (integers.length > ++idx)
                     if (integers[idx] != null)
                         root.right = new TreeNode(integers[idx]);
                     else if (integers[idx] == null) root.right = null;
-//            else return;
 
                 if (root.left != null) nodeList.add(root.left);
                 if (root.right != null) nodeList.add(root.right);
             }
 
-            nextTree(nodeList, integers, idx);
-        }
-//        if (integers[idx] == null) tree.left = null;
-//        if (integers[idx] == null) tree.right = null;
-//        if (integers.length > idx)
-//            tree.left = new TreeNode(integers[idx++]);
-//        if (integers.length > idx)
-//            tree.right = new TreeNode(integers[idx++]);
-//
-//
-//        for (TreeNode node :
-//                nodeList) {
-//            setTree(node, integers, idx);
-//
-//        }
-//
-//        setNode(tree.left, integers, idx);
-//        setNode(tree.right, integers, idx);
-//
-//        setTree(tree, integers, idx);
+        if (integers.length > idx) nextTree(nodeList, integers, idx);
+
     }
 
     private static void setNode(TreeNode tree, Integer[] integers, Integer idx) {
