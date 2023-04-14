@@ -9,11 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SampleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/SampleUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNodePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNodePrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/niyredra/common/utils/SampleUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/common/utils/SampleUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +338,7 @@
       <workItem from="1680849517502" duration="34000" />
       <workItem from="1681081702906" duration="263000" />
       <workItem from="1681307344720" duration="9201000" />
-      <workItem from="1681375194073" duration="4586000" />
+      <workItem from="1681375194073" duration="16493000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -581,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681375376990</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="稍微简化了下TreeNode样本生成工具 删了点注释">
+      <created>1681411372683</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1681411372683</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,6 +623,21 @@
     <MESSAGE value="863. 二叉树中所有距离为 K 的结点&#10;完成了数据的生成以及打印工具" />
     <MESSAGE value="稍微简化了下TreeNode样本生成工具 删了点注释" />
     <option name="LAST_COMMIT_MESSAGE" value="稍微简化了下TreeNode样本生成工具 删了点注释" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0863DistanceK.java</url>
+          <line>47</line>
+          <properties class="com.niyredra.leetcode.Order0863DistanceK.Solution" method="step">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

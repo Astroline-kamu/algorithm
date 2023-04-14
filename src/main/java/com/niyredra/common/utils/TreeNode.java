@@ -14,7 +14,7 @@
 package com.niyredra.common.utils;
 
 public class TreeNode {
-    TreeNode(int x) {
+    public TreeNode(int x) {
         this.val = x;
     }
 
