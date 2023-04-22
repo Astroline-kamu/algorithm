@@ -53,13 +53,13 @@ public class Example {
         // 开个玩笑，++i性能要比i++高，虽然多半已经修复了，所以说开个玩笑
         // todo 写个测试来验证两个角标是同步的(检查末尾是不是0，或者生成一个同长的单词) 你可以理解一下，从50开始，到最后一定是1，从49开始，到最后是0
         for (int i = 0; i < word.length; ++i) {
-            mod += Math.pow(word[i] - letterCharKey, (wordLengthCount - i) * 2);
+            mod += Math.pow(word[i] - letterCharKey + Math.pow(alphabetLength, (wordLengthCount - i)), 2);
             --wordLength;
         }
         // atm为50, 49, 48;补全47和往后
         System.out.println(" - - - - - - - - - - - - - - - - -");
         System.out.println(Arrays.toString(word) + " " + Math.sqrt(mod) + " -> " + Math.sqrt(getAlphabetModMap(wordLengthCount - wordLength)));
-        System.out.println(wordLengthCount - wordLength);
+        System.out.println(mod > getAlphabetModMap(wordLengthCount - wordLength));
         return Math.pow(mod + getAlphabetModMap(wordLengthCount - wordLength), .5);
     }
 
@@ -72,9 +72,9 @@ public class Example {
     private static double[] generateModFillMap() {
         double curVal = 0D;
         double[] modFillMap = new double[wordLengthCount];
-        for (int i = 1; i < modFillMap.length; i++) {
-            curVal += Math.pow(alphabetLength, i * 2);
-            modFillMap[modFillMap.length - i] = curVal;
+        for (int i = 1; i <= modFillMap.length; ++i) {
+//            curVal += ;
+            modFillMap[modFillMap.length - i] = Math.pow(alphabetLength + Math.pow(alphabetLength, i), 2);
         }
         return modFillMap;
     }
