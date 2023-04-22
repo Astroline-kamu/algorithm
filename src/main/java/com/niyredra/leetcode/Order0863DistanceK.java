@@ -21,6 +21,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ *
+ * 标记一种思路，通过记录树状结构的层数来直接计算出所有可能性？
+ * 1 << 层数 可以得到该层的节点总数
+ * 通过计数得到target到k的节点内容
+ */
 public class Order0863DistanceK {
     static class Solution {
         private static HashMap<Integer, TreeNode> parentNode;
@@ -86,11 +92,23 @@ public class Order0863DistanceK {
 
         public static void main(String[] args) {
 
-            TreeNode treeNodeSample = SampleUtils.getTreeNodeSample(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4});
-            List<Integer> integers = distanceK(treeNodeSample, treeNodeSample.left.right, 2);
+            TreeNode treeNodeSample;
+            List<Integer> integers;
 
-//            TreeNode treeNodeSample = SampleUtils.getTreeNodeSample(new Integer[]{0, 1, null, 3, 2});
-//            List<Integer> integers = distanceK(treeNodeSample, treeNodeSample.left.right, 1);
+            treeNodeSample = SampleUtils.getTreeNodeSample(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4});
+            integers = distanceK(treeNodeSample, treeNodeSample.right, 2);
+
+            System.out.println(integers);
+
+            SampleUtils.getTreeNodeSample(new Integer[]{0, 1, null, 3, 2});
+            distanceK(treeNodeSample, treeNodeSample.left.right, 1);
+            System.out.println(integers);
+
+
+            SampleUtils.getTreeNodeSample(new Integer[]{1});
+            distanceK(treeNodeSample, treeNodeSample, 3);
+
+
             System.out.println(integers);
             TreeNodePrinter.print(treeNodeSample);
 
