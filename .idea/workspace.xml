@@ -7,59 +7,9 @@
     <option name="rewriteBookmarkType" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="尝试了一个英文字典排序算法，不过因为一点计算问题没有继续下去了。&#10;核心思想为将字母转换成对应的数字，然后将单词转换成一个固定长度的向量容器中，求出每一个单词的模，从而进行排序。&#10;&#10;比如Abc就是[a, b, c, zn, zn-1 ... z0]的模&#10;我可以通过定一个一个词典，去存储[zn, zn-1 ... z0]的内容，通过计算[a, b, c] + [zn， zn-1, ... z0]得到最终结果，减少中间无必要的计算操作。&#10;&#10;存储模型将内容和向量v进行存放，有必要的话可以把向量长度也存入，如果向量长度不对等可以标记为特殊内容。&#10;这样就完成了一个字典排序的概念了。">
-      <change afterPath="$PROJECT_DIR$/algorithm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/src/main/java/org/gaming/air/defends/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/src/main/java/org/gaming/air/defends/Sense.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/src/main/java/org/gaming/air/defends/common/utils/DelayUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/src/main/java/org/gaming/air/defends/model/Ammunition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/src/main/java/org/gaming/air/defends/model/Scene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/src/main/java/org/gaming/air/defends/model/Tower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/src/main/java/org/gaming/air/defends/model/Weapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prototype/src/main/java/org/gaming/air/defends/model/data/GamingData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0031LRUCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0075SortColors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1703MinimumAdjacentSwapsForKConsecutiveOnes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson2_fastjson2_2_0_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jknack_handlebars_4_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_14_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_14_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_icepear_echarts_echarts_java_1_0_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_8_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_8_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_8_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_8_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_test_1_8_0_RC2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_5_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="75. 颜色分类&#10;https://leetcode.cn/problems/sort-colors/description/">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1351CountNegativeNumbersInASortedMatrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/constant/ConstantPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/constant/ConstantPath.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +142,7 @@
       <recent name="com.niyredra.multi_row_sort" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.niyredra.leetcode" />
       <recent name="main.java.com.niyredra.leetcode" />
     </key>
   </component>
@@ -404,7 +355,7 @@
       <workItem from="1684803575072" duration="8182000" />
       <workItem from="1685521082833" duration="246000" />
       <workItem from="1688274694031" duration="603000" />
-      <workItem from="1688468920219" duration="4481000" />
+      <workItem from="1688468920219" duration="6346000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -672,7 +623,23 @@
       <option name="project" value="LOCAL" />
       <updated>1682153518499</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="简单做了点休整，不确定更新了什么">
+      <option name="closed" value="true" />
+      <created>1688474961925</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1688474961925</updated>
+    </task>
+    <task id="LOCAL-00040" summary="75. 颜色分类&#10;https://leetcode.cn/problems/sort-colors/description/">
+      <option name="closed" value="true" />
+      <created>1688474988281</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1688474988281</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,8 +651,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="三数之和 图表分析 Stream流转换数据格式" />
-    <MESSAGE value="更新了时间分析工具的分析逻辑" />
     <MESSAGE value="更强大的时间分析工具！！" />
     <MESSAGE value="增加了一个排序类库" />
     <MESSAGE value="还是那个排序性能分析，但是封装了" />
@@ -709,7 +674,9 @@
     <MESSAGE value="稍微简化了下TreeNode样本生成工具 删了点注释" />
     <MESSAGE value="TreeNode原型代码" />
     <MESSAGE value="尝试了一个英文字典排序算法，不过因为一点计算问题没有继续下去了。&#10;核心思想为将字母转换成对应的数字，然后将单词转换成一个固定长度的向量容器中，求出每一个单词的模，从而进行排序。&#10;&#10;比如Abc就是[a, b, c, zn, zn-1 ... z0]的模&#10;我可以通过定一个一个词典，去存储[zn, zn-1 ... z0]的内容，通过计算[a, b, c] + [zn， zn-1, ... z0]得到最终结果，减少中间无必要的计算操作。&#10;&#10;存储模型将内容和向量v进行存放，有必要的话可以把向量长度也存入，如果向量长度不对等可以标记为特殊内容。&#10;这样就完成了一个字典排序的概念了。" />
-    <option name="LAST_COMMIT_MESSAGE" value="尝试了一个英文字典排序算法，不过因为一点计算问题没有继续下去了。&#10;核心思想为将字母转换成对应的数字，然后将单词转换成一个固定长度的向量容器中，求出每一个单词的模，从而进行排序。&#10;&#10;比如Abc就是[a, b, c, zn, zn-1 ... z0]的模&#10;我可以通过定一个一个词典，去存储[zn, zn-1 ... z0]的内容，通过计算[a, b, c] + [zn， zn-1, ... z0]得到最终结果，减少中间无必要的计算操作。&#10;&#10;存储模型将内容和向量v进行存放，有必要的话可以把向量长度也存入，如果向量长度不对等可以标记为特殊内容。&#10;这样就完成了一个字典排序的概念了。" />
+    <MESSAGE value="简单做了点休整，不确定更新了什么" />
+    <MESSAGE value="75. 颜色分类&#10;https://leetcode.cn/problems/sort-colors/description/" />
+    <option name="LAST_COMMIT_MESSAGE" value="75. 颜色分类&#10;https://leetcode.cn/problems/sort-colors/description/" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
