@@ -5,8 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.niyredra</groupId>
-    <artifactId>maven_stand_alone</artifactId>
+    <artifactId>algorithm</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>prototype</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
@@ -66,6 +70,38 @@
             <artifactId>fastjson2</artifactId>
             <version>2.0.26</version>
         </dependency>
+
+
+        <!-- 没错！本王要写游戏啦！ -->
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.lwjgl/lwjgl &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.lwjgl</groupId>-->
+<!--            <artifactId>lwjgl</artifactId>-->
+<!--            <version>3.3.2</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.lwjgl/lwjgl-opengl &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.lwjgl</groupId>-->
+<!--            <artifactId>lwjgl-opengl</artifactId>-->
+<!--            <version>3.3.2</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.lwjgl/lwjgl-glfw &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.lwjgl</groupId>-->
+<!--            <artifactId>lwjgl-glfw</artifactId>-->
+<!--            <version>3.3.2</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.lwjgl/lwjgl-stb &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.lwjgl</groupId>-->
+<!--            <artifactId>lwjgl-stb</artifactId>-->
+<!--            <version>3.3.2</version>-->
+<!--        </dependency>-->
+
+
 
 
     </dependencies>

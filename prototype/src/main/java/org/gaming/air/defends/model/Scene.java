@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2022. Astroline All rights reserved.
+ * Copyright (c) 2023. Astroline All rights reserved.
  *
- * @date: 11/7/22, 2:04 PM
+ * @date: 5/23/23, 10:16 AM
  * @author: Astroline <Astroline_kamu@outlook.com>
  *
  * 在那古老的家族里，她的名字叫Asyrerina，她不记得自己姓什么了，也有可能是那个该死的作者从来没有想过她的姓。不过在现在她生活着的地方，我们叫她亚斯兰娜，这是她的起源。
@@ -11,21 +11,11 @@
  * 在这个世界上，即便是物理学也要让她三分。在这个世界上，她实现的东西如算法一般精美，巧妙。她所谱写的，是这个世界的艺术，最原初的样貌。
  */
 
-package com.niyredra.common.constant;
-
-import com.niyredra.common.utils.StringUtils;
+package src.main.java.org.gaming.air.defends.model;
 
 /**
- * @author Niyredra Astroline_kamu@outlook.com
+ *
+ * 游戏场景 包含了一些因子等因素存在。
  */
-public class ConstantPath {
-
-    public static final String resourcePath =
-            StringUtils.packagePath(System.getProperty("user.dir"), "src", "src/main", "resources");
-
-    public static final String graphRelationshipPath =
-            StringUtils.packagePath(resourcePath, "graph", "relationship");
-
-
-
+public class Scene {
 }

@@ -1,0 +1,1 @@
+想要把这个gaming的原型跑起来的话，先去[LWJGL](https://www.lwjgl.org/customize)把自己系统的原生文件下载一下，
