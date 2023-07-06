@@ -13,8 +13,6 @@
 
 package com.niyredra.leetcode;
 
-import com.niyredra.common.utils.SampleUtils;
-
 /**
  *
  * 编写一个方法，找出两个数字a和b中最大的那一个。不得使用if-else或其他比较运算符。
@@ -22,27 +20,10 @@ import com.niyredra.common.utils.SampleUtils;
  */
 public class Interview16Order07MaximumLCCI {
 
-    // -------------------------------------------------------------------------------------------------------------- //
-    /**
-     * 时间 2 ms
-     * 内存 41.7 MB
-     */
-    static class Solution3 {
-        public static void main(String[] args) {
-            int[] sortedLargeIntArraySample = SampleUtils.getLargeIntArraySample(5);
-            new Solution3()
-                    .algorithm();
-        }
-
-        public void algorithm() {
-
-        }
-    }
 
     // -------------------------------------------------------------------------------------------------------------- //
     static class Solution2 {
         public static void main(String[] args) {
-            int[] sortedLargeIntArraySample = SampleUtils.getLargeIntArraySample(5);
             new Solution2()
                     .maximum(1, 2);
         }
