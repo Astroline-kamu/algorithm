@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order840MagicSquaresInGrid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Interview16Order07MaximumLCCI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -353,7 +353,8 @@
       <workItem from="1685521082833" duration="246000" />
       <workItem from="1688274694031" duration="603000" />
       <workItem from="1688468920219" duration="13261000" />
-      <workItem from="1688484867135" duration="196000" />
+      <workItem from="1688484867135" duration="451000" />
+      <workItem from="1688615589652" duration="1022000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -645,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688476953228</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="840. 矩阵中的幻方&#10;https://leetcode.cn/problems/magic-squares-in-grid/description/">
+      <option name="closed" value="true" />
+      <created>1688485142588</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1688485142588</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +666,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="增加了一个排序类库" />
     <MESSAGE value="还是那个排序性能分析，但是封装了" />
     <MESSAGE value="增加了一个表格备案，顺便升级了一下jdk版本" />
     <MESSAGE value="更新了一个自己研究的多级排序算法，虽然说空间复杂度上还能优化不少，不过我已经很满意辣！" />
@@ -682,7 +690,8 @@
     <MESSAGE value="简单做了点休整，不确定更新了什么" />
     <MESSAGE value="75. 颜色分类&#10;https://leetcode.cn/problems/sort-colors/description/" />
     <MESSAGE value="1351. 统计有序矩阵中的负数&#10;https://leetcode.cn/problems/count-negative-numbers-in-a-sorted-matrix/description/" />
-    <option name="LAST_COMMIT_MESSAGE" value="1351. 统计有序矩阵中的负数&#10;https://leetcode.cn/problems/count-negative-numbers-in-a-sorted-matrix/description/" />
+    <MESSAGE value="840. 矩阵中的幻方&#10;https://leetcode.cn/problems/magic-squares-in-grid/description/" />
+    <option name="LAST_COMMIT_MESSAGE" value="840. 矩阵中的幻方&#10;https://leetcode.cn/problems/magic-squares-in-grid/description/" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
