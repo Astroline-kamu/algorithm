@@ -21,6 +21,8 @@ import com.niyredra.common.utils.SampleUtils;
  * 一个数组的子数组是由原数组中零个或者更多个连续数字组成的数组。
  * 请你返回乘积为正数的最长子数组长度。
  *
+ * todo 第二个思路需要补充
+ *
  * @author Niyredra Astroline_kamu@outlook.com
  */
 public class Order1567MaximumLengthOfSubarrayWithPositiveProduct {

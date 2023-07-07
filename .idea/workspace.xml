@@ -8,9 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1567MaximumLengthOfSubarrayWithPositiveProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0865SmallestSubtreeWithAllTheDeepestNodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0865SmallestSubtreeWithAllTheDeepestNodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1567MaximumLengthOfSubarrayWithPositiveProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1567MaximumLengthOfSubarrayWithPositiveProduct.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -363,7 +362,7 @@
       <workItem from="1688651027880" duration="1308000" />
       <workItem from="1688657470686" duration="5462000" />
       <workItem from="1688697419091" duration="103000" />
-      <workItem from="1688735607248" duration="1341000" />
+      <workItem from="1688735607248" duration="1521000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -687,7 +686,23 @@
       <option name="project" value="LOCAL" />
       <updated>1688668751913</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="1567. 乘积为正数的最长子数组长度&#10;另一个思路正在路上～&#10;https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/description/">
+      <option name="closed" value="true" />
+      <created>1688738172283</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1688738172283</updated>
+    </task>
+    <task id="LOCAL-00047" summary="补充了一个todo">
+      <option name="closed" value="true" />
+      <created>1688738197223</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1688738197223</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,8 +714,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="更新了一个自己研究的多级排序算法，虽然说空间复杂度上还能优化不少，不过我已经很满意辣！" />
-    <MESSAGE value="增加了单元测试，生成一张图表展示了算法的时间损耗对比" />
     <MESSAGE value="leetcode 53题 数组连续最大和" />
     <MESSAGE value="leetcode 73题 矩阵置零" />
     <MESSAGE value="更新一个样本生成工具" />
@@ -724,7 +737,9 @@
     <MESSAGE value="840. 矩阵中的幻方&#10;https://leetcode.cn/problems/magic-squares-in-grid/description/" />
     <MESSAGE value="面试题 16.07. 最大数值&#10;https://leetcode.cn/problems/maximum-lcci/description/" />
     <MESSAGE value="865. 具有所有最深节点的最小子树&#10;没有做优化，速度极慢，待优化&#10;https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes/description/" />
-    <option name="LAST_COMMIT_MESSAGE" value="865. 具有所有最深节点的最小子树&#10;没有做优化，速度极慢，待优化&#10;https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes/description/" />
+    <MESSAGE value="1567. 乘积为正数的最长子数组长度&#10;另一个思路正在路上～&#10;https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/description/" />
+    <MESSAGE value="补充了一个todo" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充了一个todo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
