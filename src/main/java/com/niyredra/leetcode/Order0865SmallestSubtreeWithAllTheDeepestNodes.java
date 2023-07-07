@@ -24,6 +24,8 @@ import java.util.*;
  * 如果一个节点在 整个树 的任意节点之间具有最大的深度，则该节点是 最深的 。
  * 一个节点的 子树 是该节点加上它的所有后代的集合。
  *
+ * todo 优化性能
+ *
  * @author Niyredra Astroline_kamu@outlook.com
  */
 public class Order0865SmallestSubtreeWithAllTheDeepestNodes {
