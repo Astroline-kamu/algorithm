@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1880CheckIfWordEqualsSummationOfTwoWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1880CheckIfWordEqualsSummationOfTwoWordsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1663SmallestStringWithAGivenNumericValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,9 +147,22 @@
       <recent name="main.java.com.niyredra.leetcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Order1880CheckIfWordEqualsSummationOfTwoWords$Solution2">
+  <component name="RunManager" selected="Application.Order1663SmallestStringWithAGivenNumericValue$Solution1">
     <configuration name="Order1567MaximumLengthOfSubarrayWithPositiveProduct$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order1567MaximumLengthOfSubarrayWithPositiveProduct$Solution1" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Order1663SmallestStringWithAGivenNumericValue$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order1663SmallestStringWithAGivenNumericValue$Solution1" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -184,22 +196,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Order0865SmallestSubtreeWithAllTheDeepestNodesTest.lambdaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.niyredra.leetcode" />
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0865SmallestSubtreeWithAllTheDeepestNodesTest" />
-      <option name="METHOD_NAME" value="lambdaTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -291,11 +287,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Order1663SmallestStringWithAGivenNumericValue$Solution1" />
         <item itemvalue="Application.Order1880CheckIfWordEqualsSummationOfTwoWords$Solution2" />
         <item itemvalue="Application.Order1880CheckIfWordEqualsSummationOfTwoWords$Solution1" />
         <item itemvalue="JUnit.Order1880CheckIfWordEqualsSummationOfTwoWordsTest.asciiTest" />
         <item itemvalue="Application.Order1567MaximumLengthOfSubarrayWithPositiveProduct$Solution1" />
-        <item itemvalue="JUnit.Order0865SmallestSubtreeWithAllTheDeepestNodesTest.lambdaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +360,9 @@
       <workItem from="1688651027880" duration="1308000" />
       <workItem from="1688657470686" duration="5462000" />
       <workItem from="1688697419091" duration="103000" />
-      <workItem from="1688735607248" duration="5948000" />
+      <workItem from="1688735607248" duration="7208000" />
+      <workItem from="1688820163691" duration="1976000" />
+      <workItem from="1688829642623" duration="4146000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -712,7 +710,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688738249942</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="1880. 检查某单词是否等于两单词之和&#10;https://leetcode.cn/problems/check-if-word-equals-summation-of-two-words/description/">
+      <option name="closed" value="true" />
+      <created>1688742717856</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1688742717856</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -724,7 +730,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="leetcode 73题 矩阵置零" />
     <MESSAGE value="更新一个样本生成工具" />
     <MESSAGE value="leetcode 第4题 寻找两个正序数组的中位数" />
     <MESSAGE value="leetcode 第88题 合并两个有序数组" />
@@ -749,7 +754,8 @@
     <MESSAGE value="1567. 乘积为正数的最长子数组长度&#10;另一个思路正在路上～&#10;https://leetcode.cn/problems/maximum-length-of-subarray-with-positive-product/description/" />
     <MESSAGE value="补充了一个todo" />
     <MESSAGE value="新增了一个todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增了一个todo" />
+    <MESSAGE value="1880. 检查某单词是否等于两单词之和&#10;https://leetcode.cn/problems/check-if-word-equals-summation-of-two-words/description/" />
+    <option name="LAST_COMMIT_MESSAGE" value="1880. 检查某单词是否等于两单词之和&#10;https://leetcode.cn/problems/check-if-word-equals-summation-of-two-words/description/" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
