@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1663SmallestStringWithAGivenNumericValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1052GrumpyBookstoreOwner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -363,6 +363,8 @@
       <workItem from="1688735607248" duration="7208000" />
       <workItem from="1688820163691" duration="1976000" />
       <workItem from="1688829642623" duration="4146000" />
+      <workItem from="1688866514264" duration="148000" />
+      <workItem from="1688910106766" duration="649000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -630,14 +632,6 @@
       <option name="project" value="LOCAL" />
       <updated>1682153518499</updated>
     </task>
-    <task id="LOCAL-00039" summary="简单做了点休整，不确定更新了什么">
-      <option name="closed" value="true" />
-      <created>1688474961925</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1688474961925</updated>
-    </task>
     <task id="LOCAL-00040" summary="75. 颜色分类&#10;https://leetcode.cn/problems/sort-colors/description/">
       <option name="closed" value="true" />
       <created>1688474988281</created>
@@ -718,7 +712,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688742717856</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="1663. 具有给定数值的最小字符串&#10;https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/">
+      <option name="closed" value="true" />
+      <created>1688866614546</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1688866614546</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,7 +732,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="更新一个样本生成工具" />
     <MESSAGE value="leetcode 第4题 寻找两个正序数组的中位数" />
     <MESSAGE value="leetcode 第88题 合并两个有序数组" />
     <MESSAGE value="增加了一个弱引用" />
@@ -755,7 +756,8 @@
     <MESSAGE value="补充了一个todo" />
     <MESSAGE value="新增了一个todo" />
     <MESSAGE value="1880. 检查某单词是否等于两单词之和&#10;https://leetcode.cn/problems/check-if-word-equals-summation-of-two-words/description/" />
-    <option name="LAST_COMMIT_MESSAGE" value="1880. 检查某单词是否等于两单词之和&#10;https://leetcode.cn/problems/check-if-word-equals-summation-of-two-words/description/" />
+    <MESSAGE value="1663. 具有给定数值的最小字符串&#10;https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/" />
+    <option name="LAST_COMMIT_MESSAGE" value="1663. 具有给定数值的最小字符串&#10;https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
