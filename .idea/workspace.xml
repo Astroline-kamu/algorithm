@@ -8,9 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/game/cr/CombinationDps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0077Combinations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0094BinaryTreeInorderTraversal.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0902NumbersAtMostNGivenDigitSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/game/cr/CombinationDps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/game/cr/CombinationDps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +37,8 @@
         <option value="JUnit3 Test Class" />
         <option value="Record" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -148,13 +151,39 @@
       <recent name="main.java.com.niyredra.leetcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CombinationDps">
+  <component name="RunManager" selected="Application.Order0077Combinations$Solution2">
     <configuration name="CombinationDps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niyredra.game.cr.CombinationDps" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.niyredra.game.cr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Order0077Combinations$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0077Combinations$Solution1" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Order0077Combinations$Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0077Combinations$Solution2" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -175,34 +204,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Order1663SmallestStringWithAGivenNumericValue$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order1663SmallestStringWithAGivenNumericValue$Solution1" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Order1880CheckIfWordEqualsSummationOfTwoWords$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order1880CheckIfWordEqualsSummationOfTwoWords$Solution1" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Order1880CheckIfWordEqualsSummationOfTwoWords$Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order1880CheckIfWordEqualsSummationOfTwoWords$Solution2" />
+    <configuration name="Order0902NumbersAtMostNGivenDigitSet$Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0902NumbersAtMostNGivenDigitSet$Solution2" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -285,11 +288,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CombinationDps" />
+        <item itemvalue="Application.Order0077Combinations$Solution2" />
+        <item itemvalue="Application.Order0077Combinations$Solution1" />
+        <item itemvalue="Application.Order0902NumbersAtMostNGivenDigitSet$Solution2" />
         <item itemvalue="Application.Order0902NumbersAtMostNGivenDigitSet$Solution1" />
-        <item itemvalue="Application.Order1663SmallestStringWithAGivenNumericValue$Solution1" />
-        <item itemvalue="Application.Order1880CheckIfWordEqualsSummationOfTwoWords$Solution2" />
-        <item itemvalue="Application.Order1880CheckIfWordEqualsSummationOfTwoWords$Solution1" />
+        <item itemvalue="Application.CombinationDps" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +367,12 @@
       <workItem from="1688866514264" duration="148000" />
       <workItem from="1688910106766" duration="1238000" />
       <workItem from="1688923531093" duration="2475000" />
-      <workItem from="1689002211918" duration="267000" />
+      <workItem from="1689002211918" duration="727000" />
+      <workItem from="1689080828047" duration="11120000" />
+      <workItem from="1689161819721" duration="3303000" />
+      <workItem from="1689221791448" duration="111000" />
+      <workItem from="1689251490611" duration="3183000" />
+      <workItem from="1689338061341" duration="5853000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -632,14 +640,6 @@
       <option name="project" value="LOCAL" />
       <updated>1682153518499</updated>
     </task>
-    <task id="LOCAL-00041" summary="1351. 统计有序矩阵中的负数&#10;https://leetcode.cn/problems/count-negative-numbers-in-a-sorted-matrix/description/">
-      <option name="closed" value="true" />
-      <created>1688476953228</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1688476953228</updated>
-    </task>
     <task id="LOCAL-00042" summary="840. 矩阵中的幻方&#10;https://leetcode.cn/problems/magic-squares-in-grid/description/">
       <option name="closed" value="true" />
       <created>1688485142588</created>
@@ -720,7 +720,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688910961169</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="皇室战争里凑齐某一个伤害量的算法">
+      <option name="closed" value="true" />
+      <created>1689002551978</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1689002551979</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -732,7 +740,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="leetcode 第88题 合并两个有序数组" />
     <MESSAGE value="增加了一个弱引用" />
     <MESSAGE value="leetcode 第88题 合并两个有序数组 另外一种非原地算法思路和原地算法思路" />
     <MESSAGE value="一个用来展示元素关系的图表实现的原型" />
@@ -757,7 +764,8 @@
     <MESSAGE value="1880. 检查某单词是否等于两单词之和&#10;https://leetcode.cn/problems/check-if-word-equals-summation-of-two-words/description/" />
     <MESSAGE value="1663. 具有给定数值的最小字符串&#10;https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/" />
     <MESSAGE value="1052. 爱生气的书店老板&#10;https://leetcode.cn/problems/grumpy-bookstore-owner/description/" />
-    <option name="LAST_COMMIT_MESSAGE" value="1052. 爱生气的书店老板&#10;https://leetcode.cn/problems/grumpy-bookstore-owner/description/" />
+    <MESSAGE value="皇室战争里凑齐某一个伤害量的算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="皇室战争里凑齐某一个伤害量的算法" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

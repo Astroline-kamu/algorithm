@@ -37,7 +37,6 @@ public class CombinationDps {
             put("地震", 162);
         }};
 
-
         Node root = new Node();
         List<Node> nodeList = new ArrayList<>() {{
             add(root);
