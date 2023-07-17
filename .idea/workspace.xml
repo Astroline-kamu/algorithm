@@ -7,13 +7,12 @@
     <option name="rewriteBookmarkType" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0077Combinations.java" afterDir="false" />
+    <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="皇室战争里凑齐某一个伤害量的算法">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0094BinaryTreeInorderTraversal.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0902NumbersAtMostNGivenDigitSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1864MinimumNumberOfSwapsToMakeTheBinaryStringAlternating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/performance/math/BuiltinTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/niyredra/game/cr/CombinationDps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/game/cr/CombinationDps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,13 +150,13 @@
       <recent name="main.java.com.niyredra.leetcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Order0077Combinations$Solution2">
-    <configuration name="CombinationDps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.game.cr.CombinationDps" />
+  <component name="RunManager" selected="Application.BuiltinTest">
+    <configuration name="BuiltinTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.performance.math.BuiltinTest" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.niyredra.game.cr.*" />
+          <option name="PATTERN" value="com.niyredra.performance.math.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -288,11 +287,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BuiltinTest" />
         <item itemvalue="Application.Order0077Combinations$Solution2" />
         <item itemvalue="Application.Order0077Combinations$Solution1" />
         <item itemvalue="Application.Order0902NumbersAtMostNGivenDigitSet$Solution2" />
         <item itemvalue="Application.Order0902NumbersAtMostNGivenDigitSet$Solution1" />
-        <item itemvalue="Application.CombinationDps" />
       </list>
     </recent_temporary>
   </component>
@@ -372,7 +371,9 @@
       <workItem from="1689161819721" duration="3303000" />
       <workItem from="1689221791448" duration="111000" />
       <workItem from="1689251490611" duration="3183000" />
-      <workItem from="1689338061341" duration="5853000" />
+      <workItem from="1689338061341" duration="6700000" />
+      <workItem from="1689424669146" duration="6292000" />
+      <workItem from="1689510924080" duration="8167000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -640,30 +641,6 @@
       <option name="project" value="LOCAL" />
       <updated>1682153518499</updated>
     </task>
-    <task id="LOCAL-00042" summary="840. 矩阵中的幻方&#10;https://leetcode.cn/problems/magic-squares-in-grid/description/">
-      <option name="closed" value="true" />
-      <created>1688485142588</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1688485142588</updated>
-    </task>
-    <task id="LOCAL-00043" summary="面试题 16.07. 最大数值&#10;https://leetcode.cn/problems/maximum-lcci/description/">
-      <option name="closed" value="true" />
-      <created>1688618376919</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1688618376919</updated>
-    </task>
-    <task id="LOCAL-00044" summary="面试题 16.07. 最大数值&#10;https://leetcode.cn/problems/maximum-lcci/description/">
-      <option name="closed" value="true" />
-      <created>1688651048184</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1688651048184</updated>
-    </task>
     <task id="LOCAL-00045" summary="865. 具有所有最深节点的最小子树&#10;没有做优化，速度极慢，待优化&#10;https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes/description/">
       <option name="closed" value="true" />
       <created>1688668751913</created>
@@ -728,7 +705,31 @@
       <option name="project" value="LOCAL" />
       <updated>1689002551979</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="皇室战争里凑齐某一个伤害量的算法">
+      <option name="closed" value="true" />
+      <created>1689345293559</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1689345293559</updated>
+    </task>
+    <task id="LOCAL-00054" summary="补充了一个构造方法">
+      <option name="closed" value="true" />
+      <created>1689345315234</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1689345315234</updated>
+    </task>
+    <task id="LOCAL-00055" summary="77. 组合&#10;https://leetcode.cn/problems/combinations/description/">
+      <option name="closed" value="true" />
+      <created>1689345342004</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1689345342005</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -740,8 +741,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="增加了一个弱引用" />
-    <MESSAGE value="leetcode 第88题 合并两个有序数组 另外一种非原地算法思路和原地算法思路" />
     <MESSAGE value="一个用来展示元素关系的图表实现的原型" />
     <MESSAGE value="一个包含重复节点的例子，不可用，所以被迫优化= =" />
     <MESSAGE value="Edge的内容现在也是个对象啦" />
@@ -765,7 +764,9 @@
     <MESSAGE value="1663. 具有给定数值的最小字符串&#10;https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/" />
     <MESSAGE value="1052. 爱生气的书店老板&#10;https://leetcode.cn/problems/grumpy-bookstore-owner/description/" />
     <MESSAGE value="皇室战争里凑齐某一个伤害量的算法" />
-    <option name="LAST_COMMIT_MESSAGE" value="皇室战争里凑齐某一个伤害量的算法" />
+    <MESSAGE value="补充了一个构造方法" />
+    <MESSAGE value="77. 组合&#10;https://leetcode.cn/problems/combinations/description/" />
+    <option name="LAST_COMMIT_MESSAGE" value="77. 组合&#10;https://leetcode.cn/problems/combinations/description/" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
