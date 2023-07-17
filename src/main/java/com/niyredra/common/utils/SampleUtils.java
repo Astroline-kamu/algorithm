@@ -26,6 +26,16 @@ public class SampleUtils {
 
     static final int[] defaultIntMatrixValRange = new int[]{(int) (0 - Math.pow(2, 31)), (int) (Math.pow(2, 31) - 1)};
 
+    public static int[] getMinSequenceIntArray(int[] range) {
+
+        range = reRange(range[0], range[1]);
+        int[] result = new int[range[1] - range[0]];
+        for (int i = range[0]; i < range[1]; i++) {
+            result[i] = i;
+        }
+        return result;
+    }
+
     public static int[] getLargeIntArraySample() {
         int len = (int) Math.pow(10, 5);  // 100000
         return getLargeIntArraySample(len);
@@ -161,6 +171,11 @@ public class SampleUtils {
     }
 
     // -----------------------------------------------------------------------------------------------------------------
+
+    public static int[] reRange(int a, int b){
+        // 为何我不写个排序...
+        return new int[]{Math.min(a, b), Math.max(a, b)};
+    }
 
     public static int[] rangeGenerate(int min, int max) {
         return new int[]{min, max};
