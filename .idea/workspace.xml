@@ -8,14 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ec9be6-2120-4e83-8f35-8c187d419df0" name="Changes" comment="皇室战争里凑齐某一个伤害量的算法">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/common/utils/construct/ListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0094BinaryTreeInorderTraversal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0141LinkedListCycle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0383RansomNote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0461HammingDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0860LemonadeChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0205IsomorphicStrings.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order0902NumbersAtMostNGivenDigitSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/niyredra/leetcode/Order1864MinimumNumberOfSwapsToMakeTheBinaryStringAlternating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/niyredra/leetcode/Order0205IsomorphicStringsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,32 +96,32 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;idea.background.editor&quot;: &quot;/Users/eve/background library/Blur Version/BK447.jpg,21,scale,center&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/eve/Code/Niyredra/Java/Algorithm/prototype&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.41605243&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "master",
+    "idea.background.editor": "/Users/eve/background library/Blur Version/BK447.jpg,21,scale,center",
+    "last_opened_file_path": "/Users/eve/Code/Niyredra/Java/Algorithm/prototype",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.41605243",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/prototype" />
@@ -154,7 +150,33 @@
       <recent name="main.java.com.niyredra.leetcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Order0383RansomNote$Solution2">
+  <component name="RunManager" selected="Application.Order0205IsomorphicStrings$Solution2">
+    <configuration name="Order0205IsomorphicStrings$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0205IsomorphicStrings$Solution1" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Order0205IsomorphicStrings$Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0205IsomorphicStrings$Solution2" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.niyredra.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Order0383RansomNote$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0383RansomNote$Solution1" />
       <module name="algorithm" />
@@ -170,32 +192,6 @@
     </configuration>
     <configuration name="Order0383RansomNote$Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0383RansomNote$Solution2" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Order0728SelfDividingNumbers$Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0728SelfDividingNumbers$Solution1" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.niyredra.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Order0728SelfDividingNumbers$Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.niyredra.leetcode.Order0728SelfDividingNumbers$Solution2" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -291,11 +287,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Order0205IsomorphicStrings$Solution2" />
+        <item itemvalue="Application.Order0205IsomorphicStrings$Solution1" />
         <item itemvalue="Application.Order0383RansomNote$Solution2" />
         <item itemvalue="Application.Order0383RansomNote$Solution1" />
         <item itemvalue="Application.Order0728SelfDividingNumbers$Solution3" />
-        <item itemvalue="Application.Order0728SelfDividingNumbers$Solution2" />
-        <item itemvalue="Application.Order0728SelfDividingNumbers$Solution1" />
       </list>
     </recent_temporary>
   </component>
@@ -381,7 +377,7 @@
       <workItem from="1689597157750" duration="6019000" />
       <workItem from="1689684334499" duration="5467000" />
       <workItem from="1689776371755" duration="634000" />
-      <workItem from="1690113198067" duration="15143000" />
+      <workItem from="1690113198067" duration="28000000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1667455319781</created>
@@ -649,54 +645,6 @@
       <option name="project" value="LOCAL" />
       <updated>1682153518499</updated>
     </task>
-    <task id="LOCAL-00050" summary="1663. 具有给定数值的最小字符串&#10;https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/">
-      <option name="closed" value="true" />
-      <created>1688866614546</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1688866614546</updated>
-    </task>
-    <task id="LOCAL-00051" summary="1052. 爱生气的书店老板&#10;https://leetcode.cn/problems/grumpy-bookstore-owner/description/">
-      <option name="closed" value="true" />
-      <created>1688910961168</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1688910961169</updated>
-    </task>
-    <task id="LOCAL-00052" summary="皇室战争里凑齐某一个伤害量的算法">
-      <option name="closed" value="true" />
-      <created>1689002551978</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1689002551979</updated>
-    </task>
-    <task id="LOCAL-00053" summary="皇室战争里凑齐某一个伤害量的算法">
-      <option name="closed" value="true" />
-      <created>1689345293559</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1689345293559</updated>
-    </task>
-    <task id="LOCAL-00054" summary="补充了一个构造方法">
-      <option name="closed" value="true" />
-      <created>1689345315234</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1689345315234</updated>
-    </task>
-    <task id="LOCAL-00055" summary="77. 组合&#10;https://leetcode.cn/problems/combinations/description/">
-      <option name="closed" value="true" />
-      <created>1689345342004</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1689345342005</updated>
-    </task>
     <task id="LOCAL-00056" summary="对Math内置的部分方法做了一个不合理的性能测试">
       <option name="closed" value="true" />
       <created>1689597215954</created>
@@ -737,11 +685,81 @@
       <option name="project" value="LOCAL" />
       <updated>1689689850523</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="860. 柠檬水找零&#10;https://leetcode.cn/problems/lemonade-change/description/">
+      <option name="closed" value="true" />
+      <created>1690131457788</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1690131457789</updated>
+    </task>
+    <task id="LOCAL-00062" summary="141. 环形链表&#10;https://leetcode.cn/problems/linked-list-cycle/">
+      <option name="closed" value="true" />
+      <created>1690131524677</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1690131524677</updated>
+    </task>
+    <task id="LOCAL-00063" summary="94. 二叉树的中序遍历&#10;https://leetcode.cn/problems/binary-tree-inorder-traversal/">
+      <option name="closed" value="true" />
+      <created>1690131550371</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1690131550371</updated>
+    </task>
+    <task id="LOCAL-00064" summary="383. 赎金信&#10;https://leetcode.cn/problems/ransom-note/">
+      <option name="closed" value="true" />
+      <created>1690131579872</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1690131579872</updated>
+    </task>
+    <task id="LOCAL-00065" summary="461. 汉明距离&#10;https://leetcode.cn/problems/hamming-distance/">
+      <option name="closed" value="true" />
+      <created>1690131602201</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1690131602201</updated>
+    </task>
+    <task id="LOCAL-00066" summary="1864. 构成交替字符串需要的最小交换次数&#10;https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-binary-string-alternating/">
+      <option name="closed" value="true" />
+      <created>1690131632130</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1690131632130</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -749,12 +767,6 @@
       <path value="$PROJECT_DIR$/PureText/TextSearch" />
       <path value="$PROJECT_DIR$/src/PureText/TextSearch" />
     </ignored-roots>
-    <MESSAGE value="添加了一个优化的想法，目前可能不会动这块代码了；&#10;关于我本意想要构建的东西，通过重新布局来减少关系之间的交错连线的数量，我目前把这块的实现思路定义在拓扑学中，目前思路是通过定义闭环来区分节点组，利用节点组来做连线交叉的优化（想法），说到节点组，或许可以考虑用四差树来对一些已经固定的组进行整体的相同运算？（不太现实）" />
-    <MESSAGE value="863. 二叉树中所有距离为 K 的结点&#10;完成了数据的生成以及打印工具" />
-    <MESSAGE value="稍微简化了下TreeNode样本生成工具 删了点注释" />
-    <MESSAGE value="TreeNode原型代码" />
-    <MESSAGE value="尝试了一个英文字典排序算法，不过因为一点计算问题没有继续下去了。&#10;核心思想为将字母转换成对应的数字，然后将单词转换成一个固定长度的向量容器中，求出每一个单词的模，从而进行排序。&#10;&#10;比如Abc就是[a, b, c, zn, zn-1 ... z0]的模&#10;我可以通过定一个一个词典，去存储[zn, zn-1 ... z0]的内容，通过计算[a, b, c] + [zn， zn-1, ... z0]得到最终结果，减少中间无必要的计算操作。&#10;&#10;存储模型将内容和向量v进行存放，有必要的话可以把向量长度也存入，如果向量长度不对等可以标记为特殊内容。&#10;这样就完成了一个字典排序的概念了。" />
-    <MESSAGE value="简单做了点休整，不确定更新了什么" />
     <MESSAGE value="75. 颜色分类&#10;https://leetcode.cn/problems/sort-colors/description/" />
     <MESSAGE value="1351. 统计有序矩阵中的负数&#10;https://leetcode.cn/problems/count-negative-numbers-in-a-sorted-matrix/description/" />
     <MESSAGE value="840. 矩阵中的幻方&#10;https://leetcode.cn/problems/magic-squares-in-grid/description/" />
@@ -774,7 +786,13 @@
     <MESSAGE value="HashSet和for循环判断的性能比对，以及使用结论" />
     <MESSAGE value="771. 宝石与石头&#10;https://leetcode.cn/problems/jewels-and-stones/description/" />
     <MESSAGE value="728. 自除数&#10;https://leetcode.cn/problems/self-dividing-numbers/description/" />
-    <option name="LAST_COMMIT_MESSAGE" value="728. 自除数&#10;https://leetcode.cn/problems/self-dividing-numbers/description/" />
+    <MESSAGE value="860. 柠檬水找零&#10;https://leetcode.cn/problems/lemonade-change/description/" />
+    <MESSAGE value="141. 环形链表&#10;https://leetcode.cn/problems/linked-list-cycle/" />
+    <MESSAGE value="94. 二叉树的中序遍历&#10;https://leetcode.cn/problems/binary-tree-inorder-traversal/" />
+    <MESSAGE value="383. 赎金信&#10;https://leetcode.cn/problems/ransom-note/" />
+    <MESSAGE value="461. 汉明距离&#10;https://leetcode.cn/problems/hamming-distance/" />
+    <MESSAGE value="1864. 构成交替字符串需要的最小交换次数&#10;https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-binary-string-alternating/" />
+    <option name="LAST_COMMIT_MESSAGE" value="1864. 构成交替字符串需要的最小交换次数&#10;https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-binary-string-alternating/" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
